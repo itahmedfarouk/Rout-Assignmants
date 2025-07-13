@@ -27,8 +27,8 @@ Each assignment is organized in its own folder for clarity and easy access.
 
 ## 📌 Submission Info
 
-- **Group Code:** C44-G03-C#06  
-- **Deadline:** Friday, 12:00 AM
+- **Group Code:** C44-G03-C#07  
+- **Deadline:** Tuesday, 12:00 AM
 
 ---
 
