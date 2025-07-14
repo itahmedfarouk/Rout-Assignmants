@@ -2,33 +2,41 @@
 
 This repository contains all the assignments for the **C# Basics** course.
 
-Each assignment is organized in its own folder for clarity and easy access.
+Each assignment is located in a **separate Git branch** for better organization and easier review.
 
 ---
 
-## 📁 Folder Structure
+## 🌿 Branch Structure
 
-- `Assignment 02` – Data Types & Arithmetic  
-- `Assignment 03` – Conditions & Comparisons  
-- `Assignment 04` – Loops & Number Processing  
-- `Assignment 05` – Arrays  
-- `Assignment 06` – Functions  
-- `Assignment 07` – (Coming Soon)
+| Assignment     | Branch Name       | Description                         |
+|----------------|-------------------|-------------------------------------|
+| Assignment 02  | `assignment-02`   | Data Types & Arithmetic             |
+| Assignment 03  | `assignment-03`   | Conditions & Comparisons            |
+| Assignment 04  | `assignment-04`   | Loops & Number Processing           |
+| Assignment 05  | `assignment-05`   | Arrays                              |
+| Assignment 06  | `assignment-06`   | Functions                           |
+| Assignment 07  | `assignment-07`   | (Coming Soon)                       |
 
 ---
 
 ## 📝 Notes
 
-- Each assignment folder contains a single `.cs` file with all solutions.
-- Every question is labeled with `#region Qx` for easy navigation.
-- You can run and test each question individually by commenting/uncommenting the region blocks.
+- Each branch contains a `.cs` file with the full solution.
+- Questions are clearly separated using `#region Qx` blocks for easy navigation.
+- You can test and review each assignment independently by switching branches.
 
 ---
 
 ## 📌 Submission Info
 
-- **Group Code:** C44-G03-C#07  
-- **Deadline:** Tuesday, 12:00 AM
+- **Group Code:** C44-G03-C#06  
+- **Deadline:** Friday, 12:00 AM
+
+---
+
+To view a specific assignment:
+1. Click the **Branch dropdown** on GitHub.
+2. Select the branch like `assignment-04` to view its contents.
 
 ---
 
