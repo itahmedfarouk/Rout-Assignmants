@@ -1,29 +1,31 @@
 # C# Basics Assignments
 
-This repository contains all the assignments for the **C# Basics** course.
+This repository contains all the assignments for the **C# Basics** and **OOP** course modules.
 
-Each assignment is located in a **separate Git branch** for better organization and easier review.
+Each assignment is placed in a separate branch for clarity and structured review.
 
 ---
 
 ## 🌿 Branch Structure
 
-| Assignment     | Branch Name       | Description                         |
-|----------------|-------------------|-------------------------------------|
-| Assignment 02  | `assignment-02`   | Data Types & Arithmetic             |
-| Assignment 03  | `assignment-03`   | Conditions & Comparisons            |
-| Assignment 04  | `assignment-04`   | Loops & Number Processing           |
-| Assignment 05  | `assignment-05`   | Arrays                              |
-| Assignment 06  | `assignment-06`   | Functions                           |
-| Assignment 07  | `assignment-07`   | (Coming Soon)                       |
+| Assignment     | Branch Name       | Description                           |
+|----------------|-------------------|---------------------------------------|
+| Assignment 02  | `assignment-02`   | Data Types & Arithmetic               |
+| Assignment 03  | `assignment-03`   | Conditions & Comparisons              |
+| Assignment 04  | `assignment-04`   | Loops & Number Processing             |
+| Assignment 05  | `assignment-05`   | Arrays                                |
+| Assignment 06  | `assignment-06`   | Functions                             |
+| Assignment 07  | `assignment-07`   | OOP - Structs, Enums, and Encapsulation |
+| Assignment 08  | `assignment-08`   | OOP Projects: Point3D, Maths, Duration |
+| Assignment 09  | `assignment-09`   | Interfaces & Implementations          |
 
 ---
 
 ## 📝 Notes
 
-- Each branch contains a `.cs` file with the full solution.
-- Questions are clearly separated using `#region Qx` blocks for easy navigation.
-- You can test and review each assignment independently by switching branches.
+- Each branch contains a folder named `Assignment XX` with a `.cs` file containing the full solution.
+- Each file is organized using `#region` blocks (where applicable) to separate questions clearly.
+- MCQ answers are included as comments in the beginning of the file if provided in the assignment.
 
 ---
 
@@ -36,7 +38,7 @@ Each assignment is located in a **separate Git branch** for better organization 
 
 To view a specific assignment:
 1. Click the **Branch dropdown** on GitHub.
-2. Select the branch like `assignment-04` to view its contents.
+2. Select the desired branch like `assignment-09` to view its contents.
 
 ---
 
