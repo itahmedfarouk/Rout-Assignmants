@@ -1,45 +1,41 @@
-# C# Basics Assignments
+# C43-G03 C# Assignments
 
-This repository contains all the assignments for the **C# Basics** and **OOP** course modules.
+This repository contains all assignments for the C# Basics track – submitted by group C43-G03.
 
-Each assignment is placed in a separate branch for clarity and structured review.
+Each assignment is organized in its own folder and pushed on a separate branch using the following format:
 
----
-
-## 🌿 Branch Structure
-
-| Assignment     | Branch Name       | Description                           |
-|----------------|-------------------|---------------------------------------|
-| Assignment 02  | `assignment-02`   | Data Types & Arithmetic               |
-| Assignment 03  | `assignment-03`   | Conditions & Comparisons              |
-| Assignment 04  | `assignment-04`   | Loops & Number Processing             |
-| Assignment 05  | `assignment-05`   | Arrays                                |
-| Assignment 06  | `assignment-06`   | Functions                             |
-| Assignment 07  | `assignment-07`   | OOP - Structs, Enums, and Encapsulation |
-| Assignment 08  | `assignment-08`   | OOP Projects: Point3D, Maths, Duration |
-| Assignment 09  | `assignment-09`   | Interfaces & Implementations          |
+- 📁 Folder: `Assignment 01`, `Assignment 02`, ...
+- 🌿 Branch: `assignment-01`, `assignment-02`, ...
 
 ---
 
-## 📝 Notes
+## ✅ Submitted Assignments
 
-- Each branch contains a folder named `Assignment XX` with a `.cs` file containing the full solution.
-- Each file is organized using `#region` blocks (where applicable) to separate questions clearly.
-- MCQ answers are included as comments in the beginning of the file if provided in the assignment.
+| Assignment No. | Branch Name       | Folder Name      | Status |
+|----------------|-------------------|------------------|--------|
+| Assignment 01  | ❌ Not Submitted   | -                | ❌     |
+| Assignment 02  | `assignment-02`   | `Assignment 02`  | ✅     |
+| Assignment 03  | `assignment-03`   | `Assignment 03`  | ✅     |
+| Assignment 04  | `assignment-04`   | `Assignment 04`  | ✅     |
+| Assignment 05  | `assignment-05`   | `Assignment 05`  | ✅     |
+| Assignment 06  | `assignment-06`   | `Assignment 06`  | ✅     |
+| Assignment 07  | `assignment-07`   | `Assignment 07`  | ✅     |
+| Assignment 08  | `assignment-08`   | `Assignment 08`  | ✅     |
+| Assignment 09  | `assignment-09`   | `Assignment 09`  | ✅     |
+| Assignment 10  | `assignment-10`   | `Assignment 10`  | ✅     |
+| Assignment 11  | `assignment-11`   | `Assignment 11`  | ✅     |
+| Assignment 12  | `assignment-12`   | `Assignment 12`  | ✅     |
+| Assignment 13  | `assignment-13`   | `Assignment 13`  | ✅     |
 
 ---
 
-## 📌 Submission Info
-
-- **Group Code:** C44-G03-C#06  
-- **Deadline:** Friday, 12:00 AM
+## 📝 Submission Code
 
 ---
 
-To view a specific assignment:
-1. Click the **Branch dropdown** on GitHub.
-2. Select the desired branch like `assignment-09` to view its contents.
+## 💬 Notes
 
----
+- Each assignment includes both code and comments (where needed).
+- If any issues appear during review, please reach out via private message.
 
-If you have any questions or feedback, feel free to reach out 🙌
+
