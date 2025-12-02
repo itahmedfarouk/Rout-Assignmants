@@ -6,7 +6,7 @@
 ![Last Commit](https://img.shields.io/github/last-commit/itahmedfarouk/Rout-Assignmants)
 ![Stars](https://img.shields.io/github/stars/itahmedfarouk/Rout-Assignmants?style=social)
 
-A structured repository containing all **C# track assignments** submitted by **Group C43-G03**.  
+A structured repository containing all **C# track assignments** submitted by **Group C44-G03**.  
 Assignments progress from **C# Basics** to **LINQ**, **Entity Framework Core**, and **ASP.NET MVC**.
 
 ---
