@@ -1,0 +1,129 @@
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Assignment02 Ef-Core.exe
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Assignment02 Ef-Core.deps.json
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Assignment02 Ef-Core.runtimeconfig.json
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Assignment02 Ef-Core.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Assignment02 Ef-Core.pdb
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Azure.Core.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Azure.Identity.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Humanizer.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\Mono.TextTemplating.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.CodeDom.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Composition.AttributedModel.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Composition.Convention.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Composition.Hosting.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Composition.Runtime.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Composition.TypedParts.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Drawing.Common.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Memory.Data.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Runtime.Caching.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Security.Permissions.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\System.Windows.Extensions.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\obj\Debug\net9.0\Assignment02 Ef-Core.csproj.AssemblyReference.cache
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\obj\Debug\net9.0\Assignment02 Ef-Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\obj\Debug\net9.0\Assignment02 Ef-Core.AssemblyInfoInputs.cache
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\obj\Debug\net9.0\Assignment02 Ef-Core.AssemblyInfo.cs
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\obj\Debug\net9.0\Assignment02 Ef-Core.csproj.CoreCompileInputs.cache
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\obj\Debug\net9.0\Assignme.89FDA4F0.Up2Date
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\obj\Debug\net9.0\Assignment02 Ef-Core.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\obj\Debug\net9.0\refint\Assignment02 Ef-Core.dll
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\obj\Debug\net9.0\Assignment02 Ef-Core.pdb
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\obj\Debug\net9.0\Assignment02 Ef-Core.genruntimeconfig.cache
+E:\Route (FullStack .Net)\C#\C# Tasks\Assignment02 Ef-Core\Assignment02 Ef-Core\obj\Debug\net9.0\ref\Assignment02 Ef-Core.dll
