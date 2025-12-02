@@ -1,4 +1,3 @@
-````markdown
 # C# Assignments Repository (C43-G03)
 
 ![C#](https://img.shields.io/badge/C%23-.NET-512BD4?logo=dotnet&logoColor=white)
