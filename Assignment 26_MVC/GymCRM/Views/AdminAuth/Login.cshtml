@@ -1,0 +1,131 @@
+﻿@{
+    ViewData["Title"] = "تسجيل دخول الأدمن";
+    var returnUrl = (string?)ViewBag.ReturnUrl ?? (string?)Context.Request.Query["returnUrl"];
+}
+
+<div class="row justify-content-center">
+  <div class="col-md-5 col-lg-4">
+    <div class="card shadow-sm border-0">
+      <div class="card-body p-4">
+
+        <div class="text-center mb-3">
+          <div class="rounded-circle bg-danger bg-opacity-10 d-inline-flex align-items-center justify-content-center" style="width:64px;height:64px;">
+            <i class="bi bi-shield-lock fs-2 text-danger"></i>
+          </div>
+          <h4 class="mt-2 mb-0">تسجيل دخول الأدمن</h4>
+          <div class="text-muted small">صلاحيات الإدارة</div>
+        </div>
+
+        @* رسائل الخطأ العامة (TempData أو ModelState) *@
+        @if (TempData["Err"] is string err && !string.IsNullOrWhiteSpace(err))
+        {
+            <div class="alert alert-danger" role="alert">@err</div>
+        }
+        <div asp-validation-summary="All" class="alert alert-danger" role="alert"></div>
+
+        <form method="post"
+              asp-action="Login"
+              asp-controller="AdminAuth"
+              asp-route-returnUrl="@(returnUrl ?? "")"
+              id="adminLoginForm"
+              novalidate>
+          @Html.AntiForgeryToken()
+
+          <input type="hidden" name="returnUrl" value="@(returnUrl ?? "")" />
+
+          <div class="mb-3">
+            <label class="form-label" for="email">البريد الإلكتروني</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+              <input type="email"
+                     class="form-control"
+                     id="email"
+                     name="email"
+                     placeholder="admin@example.com"
+                     autocomplete="username"
+                     required />
+            </div>
+            <div class="invalid-feedback">من فضلك أدخل بريدًا صحيحًا.</div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label" for="password">كلمة المرور</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-key"></i></span>
+              <input type="password"
+                     class="form-control"
+                     id="password"
+                     name="password"
+                     placeholder="••••••••"
+                     autocomplete="current-password"
+                     required minlength="6" />
+              <button type="button" class="btn btn-outline-secondary" id="togglePwd" tabindex="-1" aria-label="إظهار/إخفاء">
+                <i class="bi bi-eye"></i>
+              </button>
+            </div>
+            <div class="invalid-feedback">أدخل كلمة مرور صحيحة (6 أحرف على الأقل).</div>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="true" id="remember" name="remember" />
+              <label class="form-check-label" for="remember">تذكّرني</label>
+            </div>
+            <a class="text-decoration-none small text-muted" href="#" tabindex="-1">هل نسيت كلمة المرور؟</a>
+          </div>
+
+          <button type="submit" class="btn btn-danger w-100" id="loginBtn">
+            <i class="bi bi-box-arrow-in-right me-1"></i> دخول
+          </button>
+
+          <div class="text-center mt-3 small text-muted">
+            للوصول العام استخدم <a href="/account/login" class="text-decoration-none">تسجيل دخول العملاء</a>
+          </div>
+
+          @* تعبئة تلقائية في بيئة التطوير فقط *@
+          <environment include="Development">
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                const email = document.getElementById('email');
+                const pass  = document.getElementById('password');
+                if (email && !email.value)  email.value = 'admin@gymcrm.local';
+                if (pass && !pass.value)    pass.value  = 'Admin@12345';
+              });
+            </script>
+          </environment>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+  <script>
+    // Bootstrap client-side validation
+    (function () {
+      const form = document.getElementById('adminLoginForm');
+      const btn  = document.getElementById('loginBtn');
+      form?.addEventListener('submit', function (e) {
+        if (!form.checkValidity()) {
+          e.preventDefault();
+          e.stopPropagation();
+        } else {
+          btn.disabled = true;
+          btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> جاري الدخول...';
+        }
+        form.classList.add('was-validated');
+      }, false);
+    })();
+
+    // Show/Hide password
+    (function () {
+      const pwd = document.getElementById('password');
+      const tog = document.getElementById('togglePwd');
+      tog?.addEventListener('click', function () {
+        const isText = pwd.type === 'text';
+        pwd.type = isText ? 'password' : 'text';
+        this.innerHTML = isText ? '<i class="bi bi-eye"></i>' : '<i class="bi bi-eye-slash"></i>';
+      });
+    })();
+  </script>
+}

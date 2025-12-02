@@ -1,0 +1,17 @@
+﻿@using Demo.BL2.DTOS.Department
+@model DepartmentViewModel
+<div class="row justify-content-center align-content-center mt-3">
+    <h1 class="col-8 my-4">Create Department</h1>
+
+    <form class="col-8" method="post" asp-controller="Departments" asp-action="Create">
+
+        <partial name="PartialView/_CreateEditPartialViewcshtml" />
+        <div class="mt-4 m-auto">
+            <input class="btn btn-primary" type="submit" value="Create" />
+            <a class="btn btn-outline-dark" asp-controller="Departments" asp-action="index">Back to list</a>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

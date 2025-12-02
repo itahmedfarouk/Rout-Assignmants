@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "جلسة جديدة";
+    var types = ViewBag.Types as List<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> ?? new();
+    var branches = ViewBag.Branches as List<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> ?? new();
+}
+<h3 class="mb-3" data-aos="fade-down">إنشاء جلسة</h3>
+
+<div class="card shadow-sm border-0" data-aos="fade-up" data-aos-duration="600">
+  <div class="card-body">
+    <form asp-controller="AdminSessions" asp-action="Create" method="post" class="row g-3 needs-validation" novalidate id="createSessionForm">
+      @Html.AntiForgeryToken()
+
+      <div class="col-md-4">
+        <label class="form-label">نوع الجلسة</label>
+        <select name="sessionTypeId" class="form-select" asp-items="types" required>
+          <option value="">اختر</option>
+        </select>
+        <div class="invalid-feedback">اختر نوع الجلسة.</div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">الفرع</label>
+        <select name="branchId" class="form-select" asp-items="branches" required>
+          <option value="">اختر</option>
+        </select>
+        <div class="invalid-feedback">اختر الفرع.</div>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">التاريخ والوقت (محلي)</label>
+        <input type="datetime-local" name="startAtLocal" class="form-control" required />
+        <div class="invalid-feedback">حدّد موعد البداية.</div>
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label">المدة (دقائق)</label>
+        <input type="number" name="durationMin" class="form-control" value="60" min="15" step="5" required />
+        <div class="invalid-feedback">المدة لا تقل عن 15 دقيقة.</div>
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label">السعة</label>
+        <input type="number" name="capacity" class="form-control" value="10" min="1" required />
+        <div class="invalid-feedback">السعة لا تقل عن 1.</div>
+      </div>
+
+      <div class="col-12 d-flex gap-2">
+        <a class="btn btn-outline-secondary" asp-controller="AdminSessions" asp-action="Index">
+          <i class="bi bi-arrow-right-circle"></i> رجوع
+        </a>
+        <button type="submit" class="btn btn-primary" id="saveBtn">
+          <i class="bi bi-check2-circle me-1"></i> حفظ
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+@section Scripts {
+<script>
+  (function () {
+    const form = document.getElementById('createSessionForm');
+    const btn  = document.getElementById('saveBtn');
+
+    form.addEventListener('submit', function (e) {
+      if (!form.checkValidity()) {
+        e.preventDefault();
+        e.stopPropagation();
+      } else {
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span> جاري الحفظ...';
+      }
+      form.classList.add('was-validated');
+    }, false);
+  })();
+</script>
+}

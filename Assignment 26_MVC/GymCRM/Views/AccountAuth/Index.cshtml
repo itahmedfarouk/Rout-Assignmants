@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "تسجيل الدخول";
+    var returnUrl = ViewBag.ReturnUrl as string;
+}
+<div class="row justify-content-center">
+  <div class="col-md-5">
+    <div class="card shadow-sm border-0" data-aos="zoom-in" data-aos-duration="500">
+      <div class="card-body p-4">
+        <h4 class="mb-3">تسجيل الدخول</h4>
+
+        <form method="post"
+              asp-action="Login"
+              asp-controller="AccountAuth"
+              asp-route-returnUrl="@(returnUrl ?? "")"
+              class="needs-validation" novalidate
+              id="loginFormAuth">
+          @Html.AntiForgeryToken()
+
+          <div class="mb-3">
+            <label class="form-label">اسم المستخدم أو البريد</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-person"></i></span>
+              <input name="username" class="form-control" placeholder="username أو email" autocomplete="username" required />
+              <div class="invalid-feedback">أدخل اسم المستخدم أو البريد.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">كلمة المرور</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-shield-lock"></i></span>
+              <input type="password" name="password" class="form-control" placeholder="••••••••" autocomplete="current-password" required />
+              <div class="invalid-feedback">أدخل كلمة المرور.</div>
+            </div>
+          </div>
+
+          @if (!ViewData.ModelState.IsValid)
+          {
+              <div class="alert alert-danger">بيانات الدخول غير صحيحة.</div>
+          }
+
+          <button class="btn btn-primary w-100" id="loginBtnAuth">
+            <i class="bi bi-box-arrow-in-right me-1"></i> دخول
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts{
+<script>
+  (function(){
+    const form = document.getElementById('loginFormAuth');
+    const btn  = document.getElementById('loginBtnAuth');
+    form.addEventListener('submit', function(e){
+      if (!form.checkValidity()){
+        e.preventDefault(); e.stopPropagation();
+      } else {
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span> جاري تسجيل الدخول...';
+      }
+      form.classList.add('was-validated');
+    });
+  })();
+</script>
+}

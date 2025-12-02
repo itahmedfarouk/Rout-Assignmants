@@ -1,0 +1,16 @@
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\obj\Debug\net8.0\Demo.BLL.csproj.AssemblyReference.cache
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\obj\Debug\net8.0\Demo.BLL.GeneratedMSBuildEditorConfig.editorconfig
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\obj\Debug\net8.0\Demo.BLL.AssemblyInfoInputs.cache
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\obj\Debug\net8.0\Demo.BLL.AssemblyInfo.cs
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\obj\Debug\net8.0\Demo.BLL.csproj.CoreCompileInputs.cache
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\obj\Debug\net8.0\Demo.BLL.sourcelink.json
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\bin\Debug\net8.0\Demo.BLL.deps.json
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\bin\Debug\net8.0\Demo.BLL.dll
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\bin\Debug\net8.0\Demo.BLL.pdb
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\bin\Debug\net8.0\Demo.DAL.dll
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\bin\Debug\net8.0\Demo.DAL.pdb
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\obj\Debug\net8.0\Demo.BLL.csproj.Up2Date
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\obj\Debug\net8.0\Demo.BLL.dll
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\obj\Debug\net8.0\refint\Demo.BLL.dll
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\obj\Debug\net8.0\Demo.BLL.pdb
+E:\Route (FullStack .Net)\MVC Coding Session\Demo.Session03MVC\Demo.PLL\obj\Debug\net8.0\ref\Demo.BLL.dll

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<GymCRM.ViewModels.AdminSessionRowViewModel>
+
+<div class="d-flex justify-content-between align-items-center mb-3" data-aos="fade-down">
+    <h3 class="mb-0">إدارة الجلسات</h3>
+    <div class="d-flex gap-2">
+        <a class="btn btn-primary" asp-controller="AdminSessions" asp-action="Create"><i class="bi bi-plus-circle me-1"></i> جلسة جديدة</a>
+        <a class="btn btn-outline-secondary" asp-controller="AdminBookings" asp-action="Requests"><i class="bi bi-envelope-exclamation me-1"></i> طلبات الإلغاء</a>
+    </div>
+</div>
+
+<div class="card shadow-sm border-0" data-aos="fade-up" data-aos-duration="600">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-hover align-middle">
+        <thead class="table-light">
+          <tr>
+            <th>#</th>
+            <th>النوع</th>
+            <th>الفرع</th>
+            <th>التاريخ</th>
+            <th>المدة</th>
+            <th>السعة</th>
+            <th>الحالة</th>
+            <th>إجراء</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach (var s in Model)
+          {
+              var startLocal = s.StartAtUtc.ToLocalTime();
+              <tr>
+                <td>@s.Id</td>
+                <td>@s.Type</td>
+                <td>@s.Branch</td>
+                <td><span class="badge bg-secondary-subtle text-dark border">@startLocal:yyyy/MM/dd HH:mm</span></td>
+                <td>@s.DurationMin دقيقة</td>
+                <td>@s.Capacity</td>
+                <td>
+                  @if (s.IsCanceled)
+                  {
+                    <span class="badge bg-danger">ملغاة</span>
+                  }
+                  else
+                  {
+                    <span class="badge bg-success">فعّالة</span>
+                  }
+                </td>
+                <td>
+                  @if (!s.IsCanceled)
+                  {
+                    <form asp-controller="AdminSessions" asp-action="Cancel" asp-route-id="@s.Id" method="post" class="d-inline" onsubmit="return confirm('تأكيد إلغاء الجلسة؟');">
+                      @Html.AntiForgeryToken()
+                      <button type="submit" class="btn btn-sm btn-outline-danger"><i class="bi bi-x-circle"></i> إلغاء</button>
+                    </form>
+                  }
+                  else
+                  {
+                    <span class="text-muted">—</span>
+                  }
+                </td>
+              </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

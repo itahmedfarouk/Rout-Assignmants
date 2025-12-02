@@ -1,0 +1,154 @@
+﻿@model Step4PaymentViewModel
+@{
+    await Html.RenderPartialAsync("_Progress", 4);
+    ViewData["Title"] = "الدفع";
+}
+
+<style>
+  .pay-hero{background:linear-gradient(135deg,#dc3545,#ff6b6b);color:#fff;border-radius:1rem 1rem 0 0;padding:1rem 1.25rem}
+  .card-shell{border-radius:1rem;overflow:hidden}
+  .pay-badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff}
+  .method-pill{border:1px solid #eee;border-radius:999px;padding:.35rem .75rem;background:#fff;display:inline-flex;gap:.35rem;align-items:center}
+  .cc-preview{background:linear-gradient(135deg,#212529,#2f3640);border-radius:.9rem;color:#fff;padding:1rem;box-shadow:0 .5rem 1rem rgba(0,0,0,.15)}
+  .cc-chip{width:36px;height:26px;border-radius:.3rem;background:linear-gradient(135deg,#e8c66a,#b08d2a)}
+  .ltr { direction:ltr }
+  .btn-gradient{background:linear-gradient(90deg,#dc3545,#ff6b6b);border:none}
+  .btn-gradient:hover{filter:brightness(1.05)}
+</style>
+
+<div class="card shadow-sm card-shell" data-aos="fade-up" data-aos-duration="600">
+  <!-- Hero -->
+  <div class="pay-hero d-flex align-items-center justify-content-between">
+    <div>
+      <div class="h5 fw-bold mb-1">الدفع</div>
+      <div class="small opacity-75">أكمل عملية الدفع لتفعيل الاشتراك فورًا</div>
+    </div>
+    <span class="badge rounded-pill pay-badge">
+      الإجمالي: <b class="ms-1" dir="ltr">@Model.Total.ToString("0.##")</b> ر.س
+    </span>
+  </div>
+
+  <div class="card-body">
+    <!-- طرق الدفع (شعارات) -->
+    <div class="d-flex flex-wrap align-items-center gap-2 mb-3" data-aos="fade-up" data-aos-delay="50">
+      <span class="text-muted small me-1">طرق الدفع المدعومة:</span>
+      <span class="method-pill">
+        <img src="~/img/payments/mada.svg" alt="Mada" height="18" onerror="this.replaceWith(document.createTextNode('Mada'))" />
+      </span>
+      <span class="method-pill">
+        <img src="~/img/payments/visa.svg" alt="Visa" height="18" onerror="this.replaceWith(document.createTextNode('Visa'))" />
+      </span>
+      <span class="method-pill">
+        <img src="~/img/payments/mastercard.svg" alt="Mastercard" height="18" onerror="this.replaceWith(document.createTextNode('Mastercard'))" />
+      </span>
+      <span class="method-pill">
+        <img src="~/img/payments/applepay.svg" alt="Apple Pay" height="18" onerror="this.replaceWith(document.createTextNode('Apple Pay'))" />
+      </span>
+    </div>
+
+    <div class="row g-4">
+      <!-- معاينة بطاقة وهمية + حقول شكلية (اختيارية) -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="cc-preview mb-3">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="cc-chip"></div>
+            <div class="small text-uppercase opacity-75">GymCRM • Secure</div>
+          </div>
+          <div class="fs-5 fw-bold mb-2 ltr" id="ccNumberPreview">•••• •••• •••• ••••</div>
+          <div class="d-flex justify-content-between small opacity-85">
+            <div>HOLDER <div class="fw-semibold mt-1" id="ccNamePreview">YOUR NAME</div></div>
+            <div>EXPIRES <div class="fw-semibold mt-1" id="ccExpPreview">MM/YY</div></div>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-12">
+            <label class="form-label">اسم حامل البطاقة</label>
+            <input class="form-control" placeholder="مثل: AHMED M ALI" oninput="ccNamePreview.textContent=this.value||'YOUR NAME'">
+          </div>
+          <div class="col-12">
+            <label class="form-label">رقم البطاقة</label>
+            <input class="form-control ltr" inputmode="numeric" maxlength="19" placeholder="•••• •••• •••• ••••"
+                   oninput="formatCard(this); ccNumberPreview.textContent=this.value||'•••• •••• •••• ••••'">
+          </div>
+          <div class="col-6">
+            <label class="form-label">تاريخ الانتهاء</label>
+            <input class="form-control ltr" inputmode="numeric" maxlength="5" placeholder="MM/YY"
+                   oninput="formatExp(this); ccExpPreview.textContent=this.value||'MM/YY'">
+          </div>
+          <div class="col-6">
+            <label class="form-label">CVV</label>
+            <input class="form-control ltr" inputmode="numeric" maxlength="4" placeholder="***">
+          </div>
+          <div class="col-12 small text-muted">
+            * الحقول بالأعلى شكلية للتجربة (محاكاة). الدفع الفعلي سيتم عبر مزوّد آمن لاحقًا.
+          </div>
+        </div>
+      </div>
+
+      <!-- الملخّص + زر الدفع -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+        <div class="border rounded-3 p-3 bg-light h-100 d-flex flex-column">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="text-muted">الإجمالي المستحق</span>
+            <span class="fw-bold" dir="ltr">@Model.Total.ToString("0.##") ر.س</span>
+          </div>
+          <div class="small text-muted mb-3">
+            سيتم تفعيل اشتراكك فور إتمام عملية الدفع بنجاح.
+          </div>
+
+          <form asp-action="Pay" method="post" id="payForm" class="mt-auto">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="SubscriptionId" />
+            <button type="submit" class="btn btn-gradient w-100" id="payBtn">
+              <span class="spinner-border spinner-border-sm me-1 d-none" id="paySpin"></span>
+              ادفع الآن (محاكاة)
+            </button>
+            <a href="/join/step3" class="btn btn-outline-secondary w-100 mt-2">رجوع</a>
+          </form>
+
+          <div class="d-flex align-items-start gap-2 mt-3 small text-muted">
+            <i class="bi bi-shield-lock me-1"></i>
+            تتم معالجة البيانات عبر اتصال آمن ومشفّر. لن نحتفظ بمعلومات البطاقة.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+  <!-- AOS (لو مش مفعّل في الـLayout) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    if (window.AOS) AOS.init({ duration: 600, once: true });
+
+    // زر الدفع: تعطيل + سبينر
+    (function () {
+      const form = document.getElementById('payForm');
+      const btn  = document.getElementById('payBtn');
+      const spin = document.getElementById('paySpin');
+      form?.addEventListener('submit', function(){
+        btn.disabled = true;
+        spin.classList.remove('d-none');
+        btn.classList.add('opacity-75');
+      });
+    })();
+
+    // تنسيق بسيط لحقول البطاقة (شكل فقط)
+    const ccNumberPreview = document.getElementById('ccNumberPreview');
+    const ccNamePreview   = document.getElementById('ccNamePreview');
+    const ccExpPreview    = document.getElementById('ccExpPreview');
+
+    function formatCard(input){
+      let v = input.value.replace(/\D/g,'').slice(0,16);
+      v = v.replace(/(\d{4})(?=\d)/g,'$1 ');
+      input.value = v;
+    }
+    function formatExp(input){
+      let v = input.value.replace(/\D/g,'').slice(0,4);
+      if (v.length >= 3) v = v.slice(0,2) + '/' + v.slice(2);
+      input.value = v;
+    }
+  </script>
+}

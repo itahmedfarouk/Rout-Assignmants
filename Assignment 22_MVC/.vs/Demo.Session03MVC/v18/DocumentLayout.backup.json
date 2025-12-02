@@ -1,0 +1,382 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.dal\\repositories\\classes\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|solutionrelative:demo.dal\\repositories\\classes\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\views\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\views\\employees\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\views\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.dal\\models\\employeemodel\\employeetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|solutionrelative:demo.dal\\models\\employeemodel\\employeetype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.dal\\models\\employeemodel\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|solutionrelative:demo.dal\\models\\employeemodel\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\views\\department\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pll\\services\\classes\\employeeservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|solutionrelative:demo.pll\\services\\classes\\employeeservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pll\\mappingprofiles\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|solutionrelative:demo.pll\\mappingprofiles\\mappingprofiles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pll\\dtos\\employeedtos\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|solutionrelative:demo.pll\\dtos\\employeedtos\\employeedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|e:\\backend(.net)\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pll\\projectreferece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|solutionrelative:demo.pll\\projectreferece.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 21,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "Demo.PL\\Controllers\\EmployeesController.cs",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "Demo.PL\\Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAA6wIoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T18:04:29.491Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c93a910a-0fa6-4307-93a4-f2bd61ec7828}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3fd5e0cc-709a-4f8c-94c3-7f0f8dff5bb2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Repositories\\Classes\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "Demo.DAL\\Repositories\\Classes\\GenericRepository.cs",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Repositories\\Classes\\GenericRepository.cs",
+              "RelativeToolTip": "Demo.DAL\\Repositories\\Classes\\GenericRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAwwBsAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-07T17:07:01.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Employees\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Demo.PL\\Views\\Employees\\Edit.cshtml",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Employees\\Edit.cshtml",
+              "RelativeToolTip": "Demo.PL\\Views\\Employees\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T16:44:22.586Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Employees\\Details.cshtml",
+              "RelativeDocumentMoniker": "Demo.PL\\Views\\Employees\\Details.cshtml",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Employees\\Details.cshtml",
+              "RelativeToolTip": "Demo.PL\\Views\\Employees\\Details.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T16:34:37.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Employees\\Create.cshtml",
+              "RelativeDocumentMoniker": "Demo.PL\\Views\\Employees\\Create.cshtml",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Employees\\Create.cshtml",
+              "RelativeToolTip": "Demo.PL\\Views\\Employees\\Create.cshtml",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-07T15:31:10.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmployeeType.cs",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Models\\EmployeeModel\\EmployeeType.cs",
+              "RelativeDocumentMoniker": "Demo.DAL\\Models\\EmployeeModel\\EmployeeType.cs",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Models\\EmployeeModel\\EmployeeType.cs",
+              "RelativeToolTip": "Demo.DAL\\Models\\EmployeeModel\\EmployeeType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T20:11:51.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Models\\EmployeeModel\\Employee.cs",
+              "RelativeDocumentMoniker": "Demo.DAL\\Models\\EmployeeModel\\Employee.cs",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Models\\EmployeeModel\\Employee.cs",
+              "RelativeToolTip": "Demo.DAL\\Models\\EmployeeModel\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T20:11:50.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Demo.PL\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Demo.PL\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-06T18:25:43.955Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Department\\Index.cshtml",
+              "RelativeDocumentMoniker": "Demo.PL\\Views\\Department\\Index.cshtml",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Department\\Index.cshtml",
+              "RelativeToolTip": "Demo.PL\\Views\\Department\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-06T18:22:46.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DepartmentController.cs",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Controllers\\DepartmentController.cs",
+              "RelativeDocumentMoniker": "Demo.PL\\Controllers\\DepartmentController.cs",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Controllers\\DepartmentController.cs",
+              "RelativeToolTip": "Demo.PL\\Controllers\\DepartmentController.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAAALkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T18:10:47.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Demo.PL\\Views\\_ViewImports.cshtml",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Demo.PL\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-06T18:09:58.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Employees\\Index.cshtml",
+              "RelativeDocumentMoniker": "Demo.PL\\Views\\Employees\\Index.cshtml",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Employees\\Index.cshtml",
+              "RelativeToolTip": "Demo.PL\\Views\\Employees\\Index.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-06T18:09:19.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EmployeeDto.cs",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\DTOs\\EmployeeDtos\\EmployeeDto.cs",
+              "RelativeDocumentMoniker": "Demo.PLL\\DTOs\\EmployeeDtos\\EmployeeDto.cs",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\DTOs\\EmployeeDtos\\EmployeeDto.cs",
+              "RelativeToolTip": "Demo.PLL\\DTOs\\EmployeeDtos\\EmployeeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T13:46:30.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProjectReferece.cs",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\ProjectReferece.cs",
+              "RelativeDocumentMoniker": "Demo.PLL\\ProjectReferece.cs",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\ProjectReferece.cs",
+              "RelativeToolTip": "Demo.PLL\\ProjectReferece.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T13:30:26.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Program.cs",
+              "RelativeDocumentMoniker": "Demo.PL\\Program.cs",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Program.cs",
+              "RelativeToolTip": "Demo.PL\\Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAqwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T13:24:59.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MappingProfiles.cs",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\MappingProfiles\\MappingProfiles.cs",
+              "RelativeDocumentMoniker": "Demo.PLL\\MappingProfiles\\MappingProfiles.cs",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\MappingProfiles\\MappingProfiles.cs",
+              "RelativeToolTip": "Demo.PLL\\MappingProfiles\\MappingProfiles.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T13:21:39.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EmployeeServices.cs",
+              "DocumentMoniker": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\Services\\Classes\\EmployeeServices.cs",
+              "RelativeDocumentMoniker": "Demo.PLL\\Services\\Classes\\EmployeeServices.cs",
+              "ToolTip": "E:\\BackEnd(.NET)\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\Services\\Classes\\EmployeeServices.cs",
+              "RelativeToolTip": "Demo.PLL\\Services\\Classes\\EmployeeServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T13:08:21.136Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

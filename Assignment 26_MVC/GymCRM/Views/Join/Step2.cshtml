@@ -1,0 +1,221 @@
+﻿@model Step2PersonalViewModel
+@{
+    await Html.RenderPartialAsync("_Progress", 2);
+    ViewData["Title"] = "البيانات الشخصية";
+}
+
+<style>
+  .card-shell{ border-radius:1rem; overflow:hidden; }
+  .card-hero{
+    background: linear-gradient(135deg,#dc3545,#ff6b6b);
+    color:#fff; padding:1.25rem 1.25rem .75rem; border-radius:1rem 1rem 0 0;
+  }
+  .subtitle{ opacity:.9 }
+  .picker{ transition: box-shadow .2s ease, transform .15s ease; }
+  .picker:hover{ transform: translateY(-2px); box-shadow:0 .8rem 1.6rem rgba(0,0,0,.08) !important; }
+
+  /* Password strength */
+  .pw-strength .bar{height:.5rem;border-radius:.4rem;background:#e9ecef;overflow:hidden}
+  .pw-strength .fill{height:100%;width:0;transition:width .25s ease;}
+  .pw-weak  { background-color:#f8d7da !important; }
+  .pw-mid   { background-color:#ffe8a1 !important; }
+  .pw-strong{ background-color:#c7f2c7 !important; }
+
+  .btn-gradient{
+    background: linear-gradient(90deg,#dc3545,#ff6b6b); border:none; color:#fff !important;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-gradient:hover{ transform: translateY(-1px); box-shadow:0 .5rem 1rem rgba(220,53,69,.25);}
+</style>
+
+<div class="card shadow-sm card-shell" data-aos="fade-up" data-aos-duration="600">
+  <div class="card-hero">
+    <div class="h5 fw-bold mb-1">بياناتك الشخصية</div>
+    <div class="subtitle">هنستخدمها لإنشاء حسابك وتفعيل اشتراكك</div>
+  </div>
+
+  <div class="card-body">
+    <!-- ملخص الأخطاء العامة -->
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+    <form asp-controller="Join" asp-action="Step2" method="post" class="row g-4" id="step2Form" novalidate>
+      @Html.AntiForgeryToken()
+
+      <!-- الاسم -->
+      <div class="col-md-6 picker" data-aos="fade-up" data-aos-delay="0">
+        <label class="form-label" asp-for="FullName"></label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-person-vcard"></i></span>
+          <input asp-for="FullName" class="form-control" placeholder="مثال: أحمد محمد علي" />
+        </div>
+        <span class="text-danger" asp-validation-for="FullName"></span>
+      </div>
+
+      <!-- الهوية -->
+      <div class="col-md-6 picker" data-aos="fade-up" data-aos-delay="50">
+        <label class="form-label" asp-for="NationalId"></label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-hash"></i></span>
+          <input asp-for="NationalId" class="form-control" inputmode="numeric" dir="ltr" placeholder="10 أو 14 رقمًا" />
+        </div>
+        <span class="text-danger" asp-validation-for="NationalId"></span>
+      </div>
+
+      <!-- الجوال -->
+      <div class="col-md-6 picker" data-aos="fade-up" data-aos-delay="100">
+        <label class="form-label" asp-for="Phone"></label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+          <input asp-for="Phone" class="form-control" type="tel" dir="ltr" placeholder="+2010… أو 05…" />
+        </div>
+        <span class="text-danger" asp-validation-for="Phone"></span>
+      </div>
+
+      <!-- البريد -->
+      <div class="col-md-6 picker" data-aos="fade-up" data-aos-delay="150">
+        <label class="form-label" asp-for="Email"></label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-at"></i></span>
+          <input asp-for="Email" class="form-control" type="email" dir="ltr" placeholder="you@example.com" />
+        </div>
+        <span class="text-danger" asp-validation-for="Email"></span>
+      </div>
+
+      <!-- اسم المستخدم -->
+      <div class="col-md-4 picker" data-aos="fade-up" data-aos-delay="200">
+        <label class="form-label" asp-for="Username"></label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-person"></i></span>
+          <input asp-for="Username" class="form-control" dir="ltr" placeholder="letters/numbers/._-" />
+        </div>
+        <span class="text-danger" asp-validation-for="Username"></span>
+      </div>
+
+      <!-- كلمة المرور -->
+      <div class="col-md-4 picker" data-aos="fade-up" data-aos-delay="250">
+        <label class="form-label" asp-for="Password"></label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-shield-lock"></i></span>
+          <input asp-for="Password" class="form-control" type="password" id="Password" placeholder="كلمة المرور" />
+          <button class="btn btn-outline-secondary" type="button" id="togglePw"><i class="bi bi-eye"></i></button>
+        </div>
+        <div class="pw-strength mt-2">
+          <div class="bar"><div class="fill" id="pwBar"></div></div>
+          <small class="text-muted" id="pwHint">استخدم 8+ أحرف مع أرقام وحروف متنوعة</small>
+        </div>
+        <span class="text-danger" asp-validation-for="Password"></span>
+      </div>
+
+      <!-- تأكيد كلمة المرور -->
+      <div class="col-md-4 picker" data-aos="fade-up" data-aos-delay="300">
+        <label class="form-label" asp-for="ConfirmPassword"></label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-shield-check"></i></span>
+          <input asp-for="ConfirmPassword" class="form-control" type="password" id="ConfirmPassword" placeholder="تأكيد كلمة المرور" />
+          <button class="btn btn-outline-secondary" type="button" id="togglePw2"><i class="bi bi-eye"></i></button>
+        </div>
+        <span class="text-danger" asp-validation-for="ConfirmPassword"></span>
+      </div>
+
+      <!-- الشروط -->
+      <div class="col-12 form-check" data-aos="fade-up" data-aos-delay="350">
+        <input asp-for="AcceptTerms" class="form-check-input" />
+        <label class="form-check-label" asp-for="AcceptTerms">
+          أوافق على <a href="/terms" target="_blank" class="link-danger">الشروط والأحكام</a>
+        </label>
+        <span class="text-danger d-block" asp-validation-for="AcceptTerms"></span>
+      </div>
+
+      <!-- أزرار -->
+      <div class="col-12 d-flex gap-2" data-aos="fade-up" data-aos-delay="400">
+        <a class="btn btn-outline-secondary" href="/join/step1">رجوع</a>
+        <button type="submit" class="btn btn-gradient" id="nextBtn">
+          <span class="spinner-border spinner-border-sm me-1 d-none" id="nextSpin"></span>
+          التالي
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+@section Scripts {
+  <!-- AOS (لو مش موجودة بالفعل) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <partial name="_ValidationScriptsPartial" />
+  <script>
+    if (window.AOS) AOS.init({ duration: 600, once: true });
+
+    // قاعدة mustbetrue للـ jQuery validate (للتحقق على العميل)
+    if (window.jQuery) {
+      $.validator.addMethod("mustbetrue", function (value, element) {
+          return element.checked === true;
+      });
+      $.validator.unobtrusive.adapters.addBool("mustbetrue");
+    }
+
+    // UI سلوكيات كلمة المرور + قوة كلمة المرور + منع الإرسال المتكرر
+    (function () {
+      const form = document.getElementById('step2Form');
+      const btn  = document.getElementById('nextBtn');
+      const spin = document.getElementById('nextSpin');
+
+      const pw     = document.getElementById('Password');
+      const pw2    = document.getElementById('ConfirmPassword');
+      const pwBar  = document.getElementById('pwBar');
+      const pwHint = document.getElementById('pwHint');
+      const t1     = document.getElementById('togglePw');
+      const t2     = document.getElementById('togglePw2');
+
+      function toggle(el, btn){
+        const isPw = el.getAttribute('type') === 'password';
+        el.setAttribute('type', isPw ? 'text' : 'password');
+        const i = btn.querySelector('i');
+        i.classList.toggle('bi-eye');
+        i.classList.toggle('bi-eye-slash');
+      }
+      t1.addEventListener('click', ()=> toggle(pw, t1));
+      t2.addEventListener('click', ()=> toggle(pw2, t2));
+
+      function scorePassword(s){
+        let score = 0;
+        if (!s) return 0;
+        if (s.length >= 8) score++;
+        if (/[A-Z]/.test(s)) score++;
+        if (/[a-z]/.test(s)) score++;
+        if (/\d/.test(s))    score++;
+        if (/[^\w\s]/.test(s)) score++; // رموز
+        return Math.min(score, 4); // 0..4
+      }
+
+      function renderStrength(){
+        const v = pw.value || "";
+        const sc = scorePassword(v);
+        let pct = 0, cls = 'pw-weak', hint = 'ضعيفة';
+        if (sc <= 1){ pct = 25; cls='pw-weak'; hint='ضعيفة'; }
+        else if (sc === 2){ pct=50; cls='pw-mid'; hint='متوسطة'; }
+        else if (sc === 3){ pct=75; cls='pw-mid'; hint='جيدة'; }
+        else { pct=100; cls='pw-strong'; hint='قوية'; }
+
+        pwBar.style.width = pct + '%';
+        pwBar.className = 'fill ' + cls;
+        pwHint.textContent = 'قوة كلمة المرور: ' + hint;
+      }
+
+      pw.addEventListener('input', renderStrength);
+      renderStrength();
+
+      form?.addEventListener('submit', function () {
+        if (window.jQuery && typeof $(form).valid === 'function') {
+          if (!$(form).valid()) {
+            btn.disabled = false;
+            spin.classList.add('d-none');
+            return;
+          }
+        }
+        btn.disabled = true;
+        spin.classList.remove('d-none');
+        btn.classList.add('opacity-75');
+      });
+    })();
+  </script>
+}

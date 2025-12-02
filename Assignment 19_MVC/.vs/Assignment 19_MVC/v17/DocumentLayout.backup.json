@@ -1,0 +1,389 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.dal\\data\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|solutionrelative:demo.dal\\data\\contexts\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.dal\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|solutionrelative:demo.dal\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pll\\departmentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|solutionrelative:demo.pll\\departmentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pll\\demo.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9907C47E-596D-4CE8-A2E7-6A6D5AA33150}|Demo.PLL\\Demo.BLL.csproj|solutionrelative:demo.pll\\demo.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.dal\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|solutionrelative:demo.dal\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.dal\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|solutionrelative:demo.dal\\models\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.dal\\data\\configurations\\employeeconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|solutionrelative:demo.dal\\data\\configurations\\employeeconfigurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.dal\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|solutionrelative:demo.dal\\globalusing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.dal\\demo.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|solutionrelative:demo.dal\\demo.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.dal\\data\\configurations\\departmentconfugurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52F46B54-A536-4379-8187-77F59417A30A}|Demo.DAL\\Demo.DAL.csproj|solutionrelative:demo.dal\\data\\configurations\\departmentconfugurations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\demo.pl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\demo.pl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|e:\\route (fullstack .net)\\mvc coding session\\demo.session03mvc\\demo.pl\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38145024-F0A9-4661-8A5F-BE5B8476838E}|Demo.PL\\Demo.PL.csproj|solutionrelative:demo.pl\\viewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\appsettings.json",
+              "RelativeDocumentMoniker": "Demo.PL\\appsettings.json",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\appsettings.json",
+              "RelativeToolTip": "Demo.PL\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-26T19:47:55.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DepartmentsController.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Controllers\\DepartmentsController.cs",
+              "RelativeDocumentMoniker": "Demo.PL\\Controllers\\DepartmentsController.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Controllers\\DepartmentsController.cs",
+              "RelativeToolTip": "Demo.PL\\Controllers\\DepartmentsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T19:06:57.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DepartmentServices.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\DepartmentServices.cs",
+              "RelativeDocumentMoniker": "Demo.PLL\\DepartmentServices.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\DepartmentServices.cs",
+              "RelativeToolTip": "Demo.PLL\\DepartmentServices.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T18:36:43.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepartmentRepository.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Repositories\\DepartmentRepository.cs",
+              "RelativeDocumentMoniker": "Demo.DAL\\Repositories\\DepartmentRepository.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Repositories\\DepartmentRepository.cs",
+              "RelativeToolTip": "Demo.DAL\\Repositories\\DepartmentRepository.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T18:34:16.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Data\\Contexts\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Demo.DAL\\Data\\Contexts\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Data\\Contexts\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Demo.DAL\\Data\\Contexts\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T17:13:45.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GlobalUsing.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\GlobalUsing.cs",
+              "RelativeDocumentMoniker": "Demo.DAL\\GlobalUsing.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\GlobalUsing.cs",
+              "RelativeToolTip": "Demo.DAL\\GlobalUsing.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T17:04:18.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmployeeConfigurations.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Data\\Configurations\\EmployeeConfigurations.cs",
+              "RelativeDocumentMoniker": "Demo.DAL\\Data\\Configurations\\EmployeeConfigurations.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Data\\Configurations\\EmployeeConfigurations.cs",
+              "RelativeToolTip": "Demo.DAL\\Data\\Configurations\\EmployeeConfigurations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T17:03:15.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DepartmentConfugurations.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Data\\Configurations\\DepartmentConfugurations.cs",
+              "RelativeDocumentMoniker": "Demo.DAL\\Data\\Configurations\\DepartmentConfugurations.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Data\\Configurations\\DepartmentConfugurations.cs",
+              "RelativeToolTip": "Demo.DAL\\Data\\Configurations\\DepartmentConfugurations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T16:54:51.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Models\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Demo.DAL\\Models\\BaseEntity.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Models\\BaseEntity.cs",
+              "RelativeToolTip": "Demo.DAL\\Models\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T16:46:44.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Department.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "Demo.DAL\\Models\\Department.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Models\\Department.cs",
+              "RelativeToolTip": "Demo.DAL\\Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T16:46:31.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Demo.DAL",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Demo.DAL.csproj",
+              "RelativeDocumentMoniker": "Demo.DAL\\Demo.DAL.csproj",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.DAL\\Demo.DAL.csproj",
+              "RelativeToolTip": "Demo.DAL\\Demo.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-26T16:46:10.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Demo.BLL",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\Demo.BLL.csproj",
+              "RelativeDocumentMoniker": "Demo.PLL\\Demo.BLL.csproj",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PLL\\Demo.BLL.csproj",
+              "RelativeToolTip": "Demo.PLL\\Demo.BLL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-26T16:34:56.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Demo.PL",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Demo.PL.csproj",
+              "RelativeDocumentMoniker": "Demo.PL\\Demo.PL.csproj",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Demo.PL.csproj",
+              "RelativeToolTip": "Demo.PL\\Demo.PL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-26T16:34:30.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Demo.PL\\Views\\_ViewImports.cshtml",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Demo.PL\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-26T16:22:17.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\ViewModels\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Demo.PL\\ViewModels\\ErrorViewModel.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\ViewModels\\ErrorViewModel.cs",
+              "RelativeToolTip": "Demo.PL\\ViewModels\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T16:20:38.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "Demo.PL\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "Demo.PL\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-26T16:19:40.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Program.cs",
+              "RelativeDocumentMoniker": "Demo.PL\\Program.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\MVC Coding Session\\Demo.Session03MVC\\Demo.PL\\Program.cs",
+              "RelativeToolTip": "Demo.PL\\Program.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBgAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-26T16:14:33.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c93a910a-0fa6-4307-93a4-f2bd61ec7828}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3fd5e0cc-709a-4f8c-94c3-7f0f8dff5bb2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

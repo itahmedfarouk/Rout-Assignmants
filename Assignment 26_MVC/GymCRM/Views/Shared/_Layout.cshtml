@@ -1,0 +1,134 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor Http
+
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>@ViewData["Title"] - Orangetheory - Fitness</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Site CSS -->
+  <link href="@(Url.Content("~/css/site.css"))" rel="stylesheet" asp-append-version="true" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="@(Url.Content("~/img/logo-light.svg"))" asp-append-version="true" />
+  <link rel="icon" type="image/png" href="@(Url.Content("~/img/logo-32.png"))" asp-append-version="true" />
+  <link rel="apple-touch-icon" href="@(Url.Content("~/img/apple-touch-icon.png"))" asp-append-version="true" />
+
+  <!-- تحسين تحميل الخلفية -->
+  <link rel="preload" as="image" href="@(Url.Content("~/img/bg-hero.jpg"))"
+        imagesrcset="@(Url.Content("~/img/bg-hero.jpg")) 1x, @(Url.Content("~/img/bg-hero@2x.jpg")) 2x"
+        asp-append-version="true" />
+
+  <style>
+    /* إظهار/إخفاء الشعار المناسب تلقائيًا حسب لون النافبار */
+    .navbar.navbar-dark .brand-dark { display: none !important; }
+    .navbar.navbar-dark .brand-light { display: inline-block !important; }
+    .navbar.navbar-light .brand-light { display: none !important; }
+    .navbar.navbar-light .brand-dark { display: inline-block !important; }
+
+    /* تحسين شكل النافبار */
+    .navbar { transition: background-color .2s ease, box-shadow .2s ease, padding .2s ease; }
+    .navbar.is-scrolled { box-shadow: 0 .25rem .75rem rgba(0,0,0,.08); }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <nav class="navbar navbar-dark bg-danger sticky-top">
+    <div class="container">
+      <!-- شعار -->
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
+        <img src="@(Url.Content("~/img/logo-light.svg"))" asp-append-version="true"
+             alt="Orangetheory - Fitness" height="28" class="brand-light" loading="eager" fetchpriority="high" />
+        <img src="@(Url.Content("~/img/logo-dark.svg"))" asp-append-version="true"
+             alt="Orangetheory - Fitness Dark" height="28" class="brand-dark" loading="eager" fetchpriority="high" />
+        <span class="visually-hidden">Orangetheory - Fitness</span>
+      </a>
+
+      <!-- زر موبايل -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNav"
+              aria-controls="topNav" aria-expanded="false" aria-label="تبديل القائمة">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      @* قراءة السيشن *@
+      @{
+        var session = Http.HttpContext?.Session;
+        var cid = session?.GetInt32("GymCRM.CurrentCustomerId");
+        var subId = session?.GetInt32("GymCRM.LastSubscriptionId");
+        var isAdmin = User?.Identity?.IsAuthenticated == true && User.IsInRole("Admin");
+      }
+
+      <div class="collapse navbar-collapse justify-content-end" id="topNav">
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-outline-light btn-sm" href="/join/step1">ابدأ الاشتراك</a>
+
+          @if (cid.HasValue)
+          {
+              var dashUrl = Url.Action("Dashboard", "Account", new { id = cid.Value, subscriptionId = subId });
+              <a class="btn btn-light btn-sm" href="@dashUrl">لوحة حسابي</a>
+
+              <form method="post" action="/account/logout" class="d-inline">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-outline-light btn-sm">تسجيل الخروج</button>
+              </form>
+          }
+          else if (isAdmin)
+          {
+              <a class="btn btn-warning btn-sm" href="/admin/dashboard">لوحة الأدمِن</a>
+
+              <form method="post" action="/account/logout" class="d-inline">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-outline-light btn-sm">تسجيل الخروج</button>
+              </form>
+          }
+          else
+          {
+              <a class="btn btn-outline-light btn-sm" href="/account/login">تسجيل الدخول</a>
+              <a class="btn btn-warning btn-sm" href="/admin/login">Admin</a>
+          }
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-4">
+    @RenderBody()
+
+    @if (IsSectionDefined("Scripts"))
+    {
+      @RenderSection("Scripts")
+    }
+  </main>
+
+  <footer class="text-center text-muted py-4">
+    <small>© @DateTime.Now.Year Orangetheory - Fitness</small>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS -->
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (window.AOS) {
+        AOS.init({ once: true, duration: 500, easing: 'ease-out' });
+      }
+    });
+
+    document.addEventListener('scroll', function () {
+      const nav = document.querySelector('.navbar');
+      if (!nav) return;
+      if (window.scrollY > 10) nav.classList.add('is-scrolled');
+      else nav.classList.remove('is-scrolled');
+    });
+  </script>
+</body>
+</html>

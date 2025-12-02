@@ -1,0 +1,60 @@
+﻿@model int
+@{
+    // نحافظ على الرينج 1..4
+    var step = Model < 1 ? 1 : (Model > 4 ? 4 : Model);
+    int pct = step * 25;
+
+    string StepClass(int i) => step > i ? "completed" : step == i ? "active" : "todo";
+    string BulletContent(int i) => step > i ? "✓" : i.ToString();
+}
+
+<style>
+  /* تقدر تنقل الاستايلات دي لـ site.css لو حابب */
+  .wizard-wrap{background:#fff;border:1px solid #eee;border-radius:1rem;padding:1rem 1.25rem}
+  .wizard-steps{display:flex;justify-content:space-between;gap:.5rem}
+  .wizard-step{text-align:center;flex:1;position:relative}
+  .wizard-step .bullet{
+      width:40px;height:40px;margin:0 auto .5rem;
+      display:flex;align-items:center;justify-content:center;
+      border-radius:50%; border:2px solid var(--bs-border-color);
+      color:#6c757d; background:#f8f9fa; font-weight:700;
+      transition:transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .wizard-step .label{font-weight:600; font-size:.95rem; white-space:nowrap}
+  .wizard-step.todo  .label{opacity:.65}
+  .wizard-step.active .bullet{background:var(--bs-danger);border-color:var(--bs-danger);color:#fff;transform:scale(1.06)}
+  .wizard-step.completed .bullet{background:#22c55e;border-color:#22c55e;color:#fff}
+  .wizard-step.completed .label{opacity:.95}
+  .wizard-progress{height:6px;background:#f1f3f5;border-radius:999px;overflow:hidden}
+  .wizard-bar{height:100%;background:linear-gradient(90deg,#dc3545,#ff6b6b)}
+</style>
+
+<div class="wizard-wrap shadow-sm mb-3" data-aos="fade-up" data-aos-duration="500">
+  <div class="wizard-steps mb-3">
+    <div class="wizard-step @StepClass(1)">
+      <div class="bullet">@Html.Raw(BulletContent(1))</div>
+      <div class="label">1 العضوية</div>
+    </div>
+    <div class="wizard-step @StepClass(2)">
+      <div class="bullet">@Html.Raw(BulletContent(2))</div>
+      <div class="label">2 البيانات الشخصية</div>
+    </div>
+    <div class="wizard-step @StepClass(3)">
+      <div class="bullet">@Html.Raw(BulletContent(3))</div>
+      <div class="label">3 المراجعة</div>
+    </div>
+    <div class="wizard-step @StepClass(4)">
+      <div class="bullet">@Html.Raw(BulletContent(4))</div>
+      <div class="label">4 الدفع</div>
+    </div>
+  </div>
+
+  <div class="wizard-progress" role="progressbar" aria-valuenow="@pct" aria-valuemin="0" aria-valuemax="100">
+    <div class="wizard-bar" style="width:@pct%"></div>
+  </div>
+</div>
+
+<script>
+  // لو AOS مش متضاف، مفيش مشكلة — بس أنصح تضيفه في الـLayout زي ما عملنا قبل كده
+  if (window.AOS) AOS.refresh();
+</script>

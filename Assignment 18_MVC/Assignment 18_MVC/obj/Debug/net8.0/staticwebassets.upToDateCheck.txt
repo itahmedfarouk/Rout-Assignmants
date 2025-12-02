@@ -1,0 +1,8 @@
+wwwroot\lib\bootstrap\css\bootstrap.css
+wwwroot\lib\bootstrap\css\bootstrap.css.map
+wwwroot\lib\bootstrap\css\bootstrap.min.css
+wwwroot\lib\bootstrap\css\bootstrap.min.css.map
+wwwroot\lib\bootstrap\js\bootstrap.bundle.js
+wwwroot\lib\bootstrap\js\bootstrap.bundle.js.map
+wwwroot\lib\bootstrap\js\bootstrap.bundle.min.js
+wwwroot\lib\bootstrap\js\bootstrap.bundle.min.js.map

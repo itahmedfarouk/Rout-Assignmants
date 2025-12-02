@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "تسجيل الدخول";
+    var returnUrl = ViewBag.ReturnUrl as string;
+}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow-sm border-0" data-aos="zoom-in" data-aos-duration="500">
+      <div class="card-body p-4">
+        <h4 class="mb-3">تسجيل دخول العميل</h4>
+
+        <form method="post" action="/account/login" class="needs-validation" novalidate id="loginFormClient">
+          @Html.AntiForgeryToken()
+          <input type="hidden" name="returnUrl" value="@returnUrl" />
+
+          <div class="mb-3">
+            <label class="form-label">اسم المستخدم أو البريد</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-person"></i></span>
+              <input name="username" class="form-control" autocomplete="username" required />
+              <div class="invalid-feedback">أدخل اسم المستخدم أو البريد.</div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">كلمة المرور</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-shield-lock"></i></span>
+              <input name="password" type="password" class="form-control" autocomplete="current-password" required />
+              <div class="invalid-feedback">أدخل كلمة المرور.</div>
+            </div>
+          </div>
+
+          @if (!ViewData.ModelState.IsValid)
+          {
+              <div class="alert alert-danger">@(ViewData.ModelState.Values.SelectMany(v => v.Errors).FirstOrDefault()?.ErrorMessage ?? "بيانات الدخول غير صحيحة.")</div>
+          }
+
+          <button class="btn btn-danger w-100" id="loginBtnClient">
+            <i class="bi bi-box-arrow-in-right me-1"></i> دخول
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts{
+<script>
+  (function(){
+    const form = document.getElementById('loginFormClient');
+    const btn  = document.getElementById('loginBtnClient');
+    form.addEventListener('submit', function(e){
+      if (!form.checkValidity()){
+        e.preventDefault(); e.stopPropagation();
+      } else {
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span> جاري تسجيل الدخول...';
+      }
+      form.classList.add('was-validated');
+    });
+  })();
+</script>
+}

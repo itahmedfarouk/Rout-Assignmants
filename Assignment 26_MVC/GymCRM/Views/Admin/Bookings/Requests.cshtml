@@ -1,0 +1,82 @@
+﻿@model IEnumerable<dynamic>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h3 class="mb-0">طلبات الإلغاء</h3>
+  <a class="btn btn-outline-secondary" asp-controller="AdminSessions" asp-action="Index">
+    <i class="bi bi-arrow-right-circle"></i> رجوع للجلسات
+  </a>
+</div>
+
+<div class="card shadow-sm border-0" data-aos="fade-up" data-aos-duration="600">
+  <div class="card-body">
+    @if (Model == null || !Model.Any())
+    {
+      <div class="alert alert-info mb-0">
+        <i class="bi bi-info-circle me-1"></i> لا توجد طلبات إلغاء حالياً.
+      </div>
+    }
+    else
+    {
+      <div class="table-responsive">
+        <table class="table table-hover align-middle">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>العميل</th>
+              <th>الجلسة</th>
+              <th>الفرع</th>
+              <th>تاريخ الجلسة</th>
+              <th>المدة</th>
+              <th>طلب الإلغاء</th>
+              <th>إجراء</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach (var r in Model)
+            {
+              DateTime startUtc = (DateTime)r.StartAtUtc;
+              var startLocal = startUtc.ToLocalTime();
+              var reqAt = (DateTime?)r.CancelRequestedAtUtc;
+              <tr>
+                <td>@r.Id</td>
+                <td class="fw-medium">@r.Customer</td>
+                <td>@r.Session</td>
+                <td>@r.Branch</td>
+                <td>
+                  <span class="badge bg-secondary-subtle text-dark border">
+                    @startLocal:yyyy/MM/dd HH:mm
+                  </span>
+                </td>
+                <td>@r.DurationMin دقيقة</td>
+                <td>
+                  @if (reqAt.HasValue)
+                  {
+                    <span class="text-muted">@reqAt.Value.ToLocalTime().ToString("yyyy/MM/dd HH:mm")</span>
+                  }
+                  else
+                  {
+                    <span class="text-muted">—</span>
+                  }
+                </td>
+                <td class="d-flex gap-1">
+                  <form asp-controller="AdminBookings" asp-action="Approve" asp-route-id="@r.Id" method="post" class="d-inline">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn btn-sm btn-success">
+                      <i class="bi bi-check2"></i> موافقة
+                    </button>
+                  </form>
+                  <form asp-controller="AdminBookings" asp-action="Reject" asp-route-id="@r.Id" method="post" class="d-inline">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn btn-sm btn-danger">
+                      <i class="bi bi-x-lg"></i> رفض
+                    </button>
+                  </form>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </div>
+</div>

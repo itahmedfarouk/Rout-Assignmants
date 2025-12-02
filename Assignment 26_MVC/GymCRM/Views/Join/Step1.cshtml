@@ -1,0 +1,298 @@
+﻿@model Step1SelectViewModel
+@using GymCRM.Model
+@{
+    await Html.RenderPartialAsync("_Progress", 1);
+    ViewData["Title"] = "اختيار التفضيلات";
+}
+
+<style>
+  .card-hero{
+    background: linear-gradient(135deg, #dc3545, #ff7272);
+    color:#fff; border-radius:1rem 1rem 0 0;
+    padding:1.25rem 1.25rem .75rem 1.25rem;
+  }
+  .card-hero .subtitle{opacity:.9}
+  .card-shell{ border-radius:1rem; overflow:hidden; }
+  .form-chip{
+    display:flex; align-items:center; gap:.5rem;
+    background:rgba(220,53,69,.08); color:#dc3545;
+    border-radius:.75rem; padding:.4rem .7rem; font-weight:600; width:max-content;
+  }
+  .picker{ transition: box-shadow .2s ease, transform .15s ease; }
+  .picker:hover{ transform:translateY(-2px); box-shadow:0 .8rem 1.6rem rgba(0,0,0,.08) !important; }
+
+  /* Loading dots داخل الـselect */
+  .loading-opt{ color:#999; }
+  .fade-in{ animation:fadeIn .2s ease both; }
+  @@keyframes fadeIn{ from{opacity:0} to{opacity:1} }
+
+  /* صندوق السعر */
+  .price-box{ border:1px solid #f1c2c7; background:#fff7f8; border-radius:.75rem; }
+  .price-box .num{ font-weight:800; font-feature-settings:"tnum" 1; font-variant-numeric:tabular-nums; }
+
+  .btn-gradient{
+    background: linear-gradient(90deg,#dc3545,#ff6b6b); border:none; color:#fff !important;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-gradient:hover{ transform: translateY(-1px); box-shadow:0 .5rem 1rem rgba(220,53,69,.25);}
+
+  .hint{ color:#6c757d; font-size:.925rem }
+</style>
+
+<div class="card shadow-sm card-shell" data-aos="fade-up" data-aos-duration="600">
+  <div class="card-hero">
+    <div class="d-flex align-items-center justify-content-between">
+      <div>
+        <div class="h5 fw-bold mb-1">اختر تفضيلاتك</div>
+        <div class="subtitle">هنجهّز لك أقرب فرع وأنسب خطة</div>
+      </div>
+      <div class="form-chip"><i class="bi bi-magic ms-1"></i> إعداد سريع</div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+    <form asp-controller="Join" asp-action="Step1" method="post" class="row g-4">
+      @Html.AntiForgeryToken()
+
+      <!-- النوع -->
+      <div class="col-md-3 picker" data-aos="fade-up" data-aos-delay="0">
+        <label class="form-label" asp-for="Gender">النوع</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-person"></i></span>
+          <select asp-for="Gender" class="form-select" id="Gender">
+            <option value="">اختر</option>
+            <option value="@((int)Gender.Male)">ذكر</option>
+            <option value="@((int)Gender.Female)">أنثى</option>
+          </select>
+        </div>
+        <span class="text-danger" asp-validation-for="Gender"></span>
+      </div>
+
+      <!-- الدولة -->
+      <div class="col-md-3 picker" data-aos="fade-up" data-aos-delay="50">
+        <label class="form-label" asp-for="CountryId">الدولة</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-globe2"></i></span>
+          <select asp-for="CountryId" class="form-select" id="CountryId" asp-items="Model.Countries">
+            <option value="">اختر</option>
+          </select>
+        </div>
+        <span class="text-danger" asp-validation-for="CountryId"></span>
+      </div>
+
+      <!-- المدينة -->
+      <div class="col-md-3 picker" data-aos="fade-up" data-aos-delay="100">
+        <label class="form-label" asp-for="CityId">المدينة</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-building"></i></span>
+          <select asp-for="CityId" class="form-select" id="CityId" disabled>
+            <option value="">اختر</option>
+          </select>
+        </div>
+        <span class="text-danger" asp-validation-for="CityId"></span>
+        <div class="hint mt-1">اختيار الدولة يفعّل المدن المتاحة.</div>
+      </div>
+
+      <!-- الفرع -->
+      <div class="col-md-3 picker" data-aos="fade-up" data-aos-delay="150">
+        <label class="form-label" asp-for="BranchId">الفرع</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+          <select asp-for="BranchId" class="form-select" id="BranchId" disabled>
+            <option value="">اختر</option>
+          </select>
+        </div>
+        <span class="text-danger" asp-validation-for="BranchId"></span>
+      </div>
+
+      <!-- الخطة -->
+      <div class="col-md-4 picker" data-aos="fade-up" data-aos-delay="200">
+        <label class="form-label" asp-for="PlanId">الخطة</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-card-checklist"></i></span>
+          <select asp-for="PlanId" class="form-select" id="PlanId" asp-items="Model.Plans">
+            <option value="">اختر</option>
+          </select>
+        </div>
+        <span class="text-danger" asp-validation-for="PlanId"></span>
+      </div>
+
+      <!-- الكوبون -->
+      <div class="col-md-4 picker" data-aos="fade-up" data-aos-delay="250">
+        <label class="form-label" asp-for="CouponCode">كود الخصم</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-ticket-perforated"></i></span>
+          <input asp-for="CouponCode" class="form-control" id="CouponCode" placeholder="مثال: GYM10" />
+          <button class="btn btn-outline-secondary" type="button" id="applyCoupon">تطبيق</button>
+        </div>
+        <span class="text-danger" asp-validation-for="CouponCode"></span>
+      </div>
+
+      <!-- أزرار -->
+      <div class="col-md-4 d-flex align-items-end gap-2" data-aos="fade-up" data-aos-delay="300">
+        <button type="submit" class="btn btn-gradient px-4">التالي</button>
+        <button type="button" id="useLocation" class="btn btn-outline-secondary">
+          <i class="bi bi-geo-alt ms-1"></i> موقعي الحالي
+        </button>
+      </div>
+
+      <!-- السعر -->
+      <div class="col-12">
+        <div id="priceBox" class="price-box p-3 mt-2 d-none">
+          <div class="d-flex align-items-center gap-3">
+            <div><span class="text-muted">الصافي:</span> <span class="num" id="pSub">—</span> ر.س</div>
+            <div><span class="text-muted">الضريبة:</span> <span class="num" id="pVat">—</span> ر.س</div>
+            <div class="ms-auto"><span class="fw-bold">الإجمالي:</span> <span class="num" id="pTot">—</span> ر.س</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <div id="nearWrap" class="row g-3 d-none"></div>
+      </div>
+    </form>
+  </div>
+</div>
+
+@section Scripts {
+  <!-- AOS (لو مش موجودة في الـLayout) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+  if (window.AOS) AOS.init({ duration: 600, once: true });
+
+  (function(){
+    const genderSel  = document.getElementById('Gender');
+    const countrySel = document.getElementById('CountryId');
+    const citySel    = document.getElementById('CityId');
+    const branchSel  = document.getElementById('BranchId');
+    const planSel    = document.getElementById('PlanId');
+    const couponInp  = document.getElementById('CouponCode');
+    const priceBox   = document.getElementById('priceBox');
+    const pSub       = document.getElementById('pSub');
+    const pVat       = document.getElementById('pVat');
+    const pTot       = document.getElementById('pTot');
+    const applyBtn   = document.getElementById('applyCoupon');
+    const useLocBtn  = document.getElementById('useLocation');
+    const nearWrap   = document.getElementById('nearWrap');
+
+    // helpers
+    function enable(el){ el.disabled = false; el.removeAttribute('disabled'); }
+    function disable(el){ el.disabled = true;  el.setAttribute('disabled','disabled'); }
+    function setLoading(selectEl, msg){
+      selectEl.innerHTML = `<option class="loading-opt" value="">${msg}</option>`;
+    }
+
+    async function loadCities(){
+      const countryId = countrySel.value;
+      citySel.innerHTML   = '<option value="">اختر</option>';
+      branchSel.innerHTML = '<option value="">اختر</option>';
+      disable(citySel); disable(branchSel);
+
+      if(!countryId) return;
+      try{
+        setLoading(citySel, '... جاري التحميل');
+        const res = await fetch(`/join/cities?countryId=${encodeURIComponent(countryId)}`);
+        if(!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        citySel.innerHTML = '<option value="">اختر</option>' + data.map(x => `<option value="${x.id}">${x.name}</option>`).join('');
+        enable(citySel);
+      }catch(err){
+        console.error('loadCities error:', err);
+        citySel.innerHTML = '<option value="">فشل تحميل المدن</option>';
+      }
+    }
+
+    async function loadBranches(){
+      const cityId = citySel.value;
+      const gender = genderSel.value;
+      setLoading(branchSel, '... جاري التحميل');
+      disable(branchSel);
+
+      if(!cityId){ branchSel.innerHTML = '<option value="">اختر</option>'; return; }
+
+      try{
+        const qs = new URLSearchParams({ cityId });
+        if (gender) qs.append('gender', gender);
+
+        const res = await fetch(`/join/branches?${qs.toString()}`);
+        if(!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+
+        if(!Array.isArray(data) || data.length === 0){
+          branchSel.innerHTML = '<option value="">لا توجد فروع مطابقة</option>';
+        }else{
+          branchSel.innerHTML = '<option value="">اختر</option>' + data.map(x => `<option value="${x.id}">${x.name}</option>`).join('');
+        }
+        enable(branchSel);
+      }catch(err){
+        console.error('loadBranches error:', err);
+        branchSel.innerHTML = '<option value="">فشل تحميل الفروع</option>';
+        enable(branchSel);
+      }
+    }
+
+    async function updatePrice(){
+      const planId = planSel.value;
+      const coupon = couponInp.value || '';
+      if(!planId){ priceBox.classList.add('d-none'); pSub.textContent=pVat.textContent=pTot.textContent='—'; return; }
+      try{
+        const res = await fetch(`/join/price?planId=${encodeURIComponent(planId)}&coupon=${encodeURIComponent(coupon)}`);
+        if(!res.ok) throw new Error('HTTP ' + res.status);
+        const r = await res.json();
+        priceBox.classList.remove('d-none');
+        pSub.textContent = r.subtotal;
+        pVat.textContent = r.vat;
+        pTot.textContent = r.total;
+        priceBox.classList.add('fade-in');
+        setTimeout(()=>priceBox.classList.remove('fade-in'),200);
+      }catch(err){
+        console.error('updatePrice error:', err);
+      }
+    }
+
+    function debounce(fn, ms){ let t; return (...args)=>{ clearTimeout(t); t=setTimeout(()=>fn.apply(this,args), ms); }; }
+
+    countrySel.addEventListener('change', loadCities);
+    citySel.addEventListener('change', loadBranches);
+    genderSel.addEventListener('change', loadBranches);
+    planSel.addEventListener('change', updatePrice);
+    couponInp.addEventListener('input', debounce(updatePrice, 400));
+    applyBtn.addEventListener('click', updatePrice);
+
+    // استخدام موقعي (يعرض أقرب فروع فقط بشكل كروت؛ الاختيار يظل يدوي لتوافق الـAPI الحالية)
+    useLocBtn?.addEventListener('click', () => {
+      if(!navigator.geolocation){ alert('المتصفح لا يدعم تحديد الموقع.'); return; }
+      navigator.geolocation.getCurrentPosition(async (pos)=>{
+        try{
+          const { latitude, longitude } = pos.coords;
+          const r  = await fetch(`/join/nearest?lat=${latitude}&lng=${longitude}&take=3`);
+          const js = await r.json(); // [{branchId, branchName, cityName, distanceKm}]
+          if(!js || js.length===0){ nearWrap.classList.add('d-none'); nearWrap.innerHTML=''; return; }
+          nearWrap.classList.remove('d-none');
+          nearWrap.innerHTML = js.map(x => `
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="card h-100 shadow-sm rounded-4">
+                <div class="card-body d-flex flex-column">
+                  <div class="fw-bold mb-1">${x.branchName}</div>
+                  <div class="text-muted small mb-2">${x.cityName} — ${Number(x.distanceKm).toFixed(1)} كم</div>
+                  <div class="mt-auto">
+                    <span class="hint d-block mb-2">اختر الدولة/المدينة يدويًا ثم هذا الفرع.</span>
+                    <button type="button" class="btn btn-outline-danger w-100" disabled>اختيار</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `).join('');
+          if (window.AOS) AOS.refresh();
+        }catch{ nearWrap.classList.add('d-none'); }
+      }, _ => alert('لم نتمكن من الحصول على موقعك.'));
+    });
+
+    // تهيئة أولية لو الصفحة رجعت بقيم محفوظة
+    if(countrySel.value) loadCities().then(()=>{ if(citySel.value) loadBranches(); });
+    if(planSel.value || couponInp.value) updatePrice();
+  })();
+  </script>
+}

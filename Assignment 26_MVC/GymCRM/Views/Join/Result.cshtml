@@ -1,0 +1,135 @@
+﻿@model bool
+@{
+    ViewData["Title"] = "نتيجة الدفع";
+
+    // نلتقط subscriptionId من الراوت علشان زر "العودة للدفع" يودّي Step4 صح
+    int? subId = null;
+    if (ViewContext.RouteData.Values["id"] is string s && int.TryParse(s, out var i1)) subId = i1;
+    else if (ViewContext.RouteData.Values["id"] is int i2) subId = i2;
+
+    var payRef = TempData["GymCRM.PaymentRef"] as string; // قد تكون null في النجاح
+    var ok = Model;
+}
+
+<style>
+  .result-card{border-radius:1rem;overflow:hidden}
+  .result-hero{background:linear-gradient(135deg,#22c55e,#16a34a)}
+  .result-hero.fail{background:linear-gradient(135deg,#ef4444,#dc2626)}
+  .result-hero .icon{width:72px;height:72px}
+  .soft{background:#f8fafc;border:1px solid #eef2f7;border-radius:.75rem}
+  .btn-gradient{background:linear-gradient(90deg,#dc3545,#ff6b6b);border:none}
+  .btn-gradient:hover{filter:brightness(1.05)}
+</style>
+
+<div class="card shadow-sm result-card my-5" data-aos="fade-up" data-aos-duration="600">
+  <div class="result-hero text-white p-4 @(ok ? "" : "fail")">
+    <div class="container">
+      <div class="d-flex align-items-center gap-3">
+        @if (ok)
+        {
+          <svg class="icon flex-shrink-0" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" fill="rgba(255,255,255,.2)"/>
+            <path d="M8 12.5l2.5 2.5L16 9" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <div>
+            <div class="h4 fw-bold mb-1">تم الدفع بنجاح</div>
+            <div class="opacity-75">تم تفعيل اشتراكك، ويمكنك متابعة حسابك الآن</div>
+          </div>
+        }
+        else
+        {
+          <svg class="icon flex-shrink-0" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" fill="rgba(255,255,255,.2)"/>
+            <path d="M8 8l8 8M16 8l-8 8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div>
+            <div class="h4 fw-bold mb-1">فشل الدفع</div>
+            <div class="opacity-75">حدثت مشكلة أثناء تنفيذ العملية. يمكنك المحاولة مرة أخرى</div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-7">
+          <div class="soft p-3 mb-3" data-aos="fade-up" data-aos-delay="50">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="text-muted">مرجع العملية</div>
+              <div class="d-flex align-items-center gap-2">
+                <code class="fw-bold ltr" id="payRef" dir="ltr">@(!string.IsNullOrWhiteSpace(payRef) ? payRef : "—")</code>
+                <button type="button" class="btn btn-sm btn-outline-secondary" id="copyBtn" @(string.IsNullOrWhiteSpace(payRef) ? "disabled" : "")>
+                  <i class="bi bi-clipboard"></i> نسخ
+                </button>
+              </div>
+            </div>
+          </div>
+
+          @if (!ok)
+          {
+            <div class="alert alert-warning" data-aos="fade-up" data-aos-delay="100">
+              تأكد من توفر رصيد كافٍ أو جرّب وسيلة دفع أخرى. إن استمرت المشكلة، تواصل مع الدعم.
+            </div>
+          }
+        </div>
+
+        <div class="col-lg-5">
+          <div class="d-grid gap-2" data-aos="fade-up" data-aos-delay="150">
+            @if (ok)
+            {
+              <a href="/account/dashboard" class="btn btn-gradient btn-lg">
+                الذهاب إلى لوحة الحساب
+              </a>
+              <div class="d-flex gap-2">
+                <a href="/" class="btn btn-outline-secondary w-100">الصفحة الرئيسية</a>
+                <a href="/join/step1" class="btn btn-outline-primary w-100">بدء اشتراك جديد</a>
+              </div>
+            }
+            else
+            {
+              <a href="@(subId.HasValue ? Url.Action("Step4","Join", new { id = subId.Value }) : "/join/step1")"
+                 class="btn btn-gradient btn-lg">
+                 المحاولة مرة أخرى
+              </a>
+              <div class="d-flex gap-2">
+                <a href="/join/step1" class="btn btn-outline-secondary w-100">بدء اشتراك جديد</a>
+                <a href="/" class="btn btn-outline-primary w-100">الصفحة الرئيسية</a>
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+  <!-- لو لسه ما ضفتش AOS في الـLayout -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- كونفِتّي خفيف للنجاح -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    if (window.AOS) AOS.init({ duration: 600, once: true });
+
+    // نسخ مرجع العملية
+    document.getElementById('copyBtn')?.addEventListener('click', async () => {
+      const val = document.getElementById('payRef')?.textContent?.trim();
+      if (!val || val === "—") return;
+      try { await navigator.clipboard.writeText(val); 
+            const btn = document.getElementById('copyBtn'); 
+            const old = btn.innerHTML; btn.innerHTML = '<i class="bi bi-check2"></i> نُسخ';
+            setTimeout(()=> btn.innerHTML = old, 1200);
+      } catch {}
+    });
+
+    // كونفتّي عند النجاح
+    const isOk = @Model.ToString().ToLower();
+    if (isOk && window.confetti) {
+      setTimeout(() => {
+        confetti({ particleCount: 120, spread: 70, origin: { y: 0.3 } });
+      }, 250);
+    }
+  </script>
+}

@@ -1,0 +1,343 @@
+﻿@model GymCRM.ViewModels.LandingViewModel
+@{
+    ViewData["Title"] = "Welcome";
+}
+
+<style>
+  /* ===== جماليات عامة ===== */
+  .section-title{
+    position:relative; padding-bottom:.5rem; margin-bottom:1.25rem;
+  }
+  .section-title:after{
+    content:""; position:absolute; bottom:0; right:0; height:3px; width:80px;
+    background: linear-gradient(90deg,#dc3545,#ff7b7b);
+    border-radius:3px;
+  }
+  .btn-gradient{
+    background: linear-gradient(90deg,#dc3545,#ff6b6b); border:none;
+    color:#fff !important;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-gradient:hover{ transform: translateY(-1px); box-shadow:0 .5rem 1rem rgba(220,53,69,.25);}
+  .card-hover{
+    transition: transform .2s ease, box-shadow .2s ease;
+    will-change: transform;
+  }
+  .card-hover:hover{
+    transform: translateY(-6px);
+    box-shadow:0 1.25rem 2.5rem rgba(0,0,0,.12) !important;
+  }
+  .icon-bubble{
+    width:48px; height:48px; display:grid; place-items:center;
+    border-radius:12px; background:rgba(220,53,69,.1); color:#dc3545; font-size:1.3rem;
+  }
+  /* ===== HERO ===== */
+  .hero{
+    min-height:60vh;
+    background: url('@Url.Content("~/img/bg-hero.jpg")') center/cover no-repeat fixed;
+    position:relative; isolation:isolate;
+  }
+  .hero:before{
+    content:""; position:absolute; inset:0; z-index:0;
+    background: radial-gradient(1200px 600px at 85% -10%, rgba(255,255,255,.1), transparent 60%),
+                linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55));
+    backdrop-filter:saturate(120%);
+  }
+  .hero-shape{
+    position:absolute; inset:auto auto -1px 0; height:60px; width:100%;
+    background: radial-gradient(120px 40px at 10% 0%, rgba(220,53,69,.25), transparent 70%),
+                radial-gradient(180px 50px at 40% 0%, rgba(220,53,69,.18), transparent 70%),
+                radial-gradient(220px 60px at 80% 0%, rgba(220,53,69,.14), transparent 70%);
+    opacity:.9;
+  }
+  .hero h1, .hero p, .hero .btn { position:relative; z-index:1; }
+  .floaty{
+    animation: floaty 6s ease-in-out infinite;
+  }
+  @@keyframes floaty{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+
+  /* ===== جلسات قادمة ===== */
+  .session-card .badge{
+    background: rgba(220,53,69,.1);
+    color:#dc3545;
+  }
+
+  /* ===== نتائج الأقرب ===== */
+  .near-card .km{
+    font-feature-settings:"tnum" 1; font-variant-numeric: tabular-nums;
+  }
+
+  /* تحسينات صغيرة */
+  .rounded-4{ border-radius:1rem !important; }
+  .rounded-5{ border-radius:1.5rem !important; }
+</style>
+
+<!-- HERO -->
+<section class="hero d-flex align-items-center overflow-hidden">
+  <div class="container text-white py-5">
+    <div class="row align-items-center">
+      <div class="col-lg-7" data-aos="fade-up" data-aos-duration="700">
+        <h1 class="display-5 fw-bold mb-3 floaty">ابدأ رحلتك الرياضية اليوم</h1>
+        <p class="lead mb-4 text-white-50">اشتراك مرن، فروع قريبة، وجلسات جماعية تُناسب جدولك.</p>
+        <a href="/join/step1" class="btn btn-gradient btn-lg px-4">
+          ابدأ الآن
+          <i class="bi bi-arrow-left-short me-1"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-shape"></div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="0">
+        <div class="p-4 bg-white shadow-sm rounded-4 card-hover h-100">
+          <div class="icon-bubble mx-auto mb-3"><i class="bi bi-geo-alt"></i></div>
+          <div class="fw-bold mb-1">شبكة فروع واسعة</div>
+          <div class="text-muted">اختر الأقرب لك بسهولة</div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="p-4 bg-white shadow-sm rounded-4 card-hover h-100">
+          <div class="icon-bubble mx-auto mb-3"><i class="bi bi-people"></i></div>
+          <div class="fw-bold mb-1">جلسات متنوعة</div>
+          <div class="text-muted">يوجا، ساونا، وتمارين HIIT</div>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="p-4 bg-white shadow-sm rounded-4 card-hover h-100">
+          <div class="icon-bubble mx-auto mb-3"><i class="bi bi-credit-card"></i></div>
+          <div class="fw-bold mb-1">خيارات دفع مرنة</div>
+          <div class="text-muted">شهري أو مقدم</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="py-5">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h3 class="section-title mb-0">خطط الاشتراك</h3>
+      <a class="btn btn-outline-danger btn-sm" href="/join/step1">اشترك الآن</a>
+    </div>
+
+    <div class="row g-4">
+      @foreach (var p in Model.Plans)
+      {
+        <div class="col-md-4" data-aos="fade-up">
+          <div class="card h-100 shadow-sm rounded-5 card-hover border-0">
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h5 class="fw-bold mb-0">@p.TitleAr</h5>
+                <span class="badge rounded-pill">@p.DurationMonths شهر</span>
+              </div>
+
+              <div class="fs-2 fw-bold mb-2">@p.PriceMonthly ر.س
+                <span class="fs-6 text-muted">/شهر</span>
+              </div>
+
+              @if (p.PriceUpfront.HasValue)
+              {
+                <div class="mb-2 text-muted">أو مقدم: <b class="text-dark">@p.PriceUpfront</b> ر.س</div>
+              }
+
+              <ul class="list-unstyled small text-muted mb-4">
+                <li class="mb-1"><i class="bi bi-check2-circle text-success ms-1"></i> دخول غير محدود للفروع المحددة</li>
+                <li class="mb-1"><i class="bi bi-check2-circle text-success ms-1"></i> جلسات جماعية أسبوعية</li>
+                <li class="mb-1"><i class="bi bi-check2-circle text-success ms-1"></i> إشعارات تذكير قبل الجلسة</li>
+              </ul>
+
+              <div class="mt-auto">
+                <a class="btn btn-gradient w-100" href="/join/step1?planId=@p.Id">اشترك في هذه الخطة</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- CLUB FINDER -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="section-title">ابحث عن أقرب نادي</h3>
+
+    <div class="row g-3 align-items-end">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="0">
+        <label class="form-label">الدولة</label>
+        <select id="countrySel" class="form-select">
+          <option value="">اختر</option>
+          @foreach (var c in Model.Countries)
+          {
+              <option value="@c.Value">@c.Text</option>
+          }
+        </select>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="50">
+        <label class="form-label">المدينة</label>
+        <select id="citySel" class="form-select" disabled>
+          <option value="">اختر الدولة أولًا</option>
+        </select>
+      </div>
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+        <label class="form-label">الفرع</label>
+        <select id="branchSel" class="form-select" disabled>
+          <option value="">اختر المدينة أولًا</option>
+        </select>
+      </div>
+      <div class="col-md-3 d-flex gap-2" data-aos="fade-up" data-aos-delay="150">
+        <button id="btnNear" class="btn btn-outline-secondary w-100" type="button">
+          <i class="bi bi-geo-alt ms-1"></i> أقرب نادي تلقائيًا
+        </button>
+        <a id="btnGo" class="btn btn-gradient w-100 disabled" href="#">اشترك هنا</a>
+      </div>
+    </div>
+
+    <div id="nearResults" class="row g-4 mt-1 d-none"></div>
+  </div>
+</section>
+
+<!-- UPCOMING SESSIONS -->
+<section class="py-5">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h3 class="section-title mb-0">جلسات قادمة</h3>
+      <a class="btn btn-outline-danger btn-sm" href="/account/login">سجّل الدخول لحجز جلسة</a>
+    </div>
+
+    <div id="sessionsWrap" class="row g-4">
+      <div class="col-12 text-muted">جاري التحميل…</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="py-5 bg-danger text-white text-center">
+  <div class="container" data-aos="zoom-in">
+    <h4 class="fw-bold mb-3">جاهز تبدأ؟</h4>
+    <a class="btn btn-light btn-lg" href="/join/step1">
+      ابدأ الاشتراك الآن
+      <i class="bi bi-arrow-left-short me-1"></i>
+    </a>
+  </div>
+</section>
+
+@section Scripts {
+  <!-- AOS (لو ما ضفتها في الـLayout) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Init AOS
+    if (window.AOS) AOS.init({ duration: 700, once: true });
+
+    // ========== Club Finder ==========
+    const countrySel = document.getElementById('countrySel');
+    const citySel    = document.getElementById('citySel');
+    const branchSel  = document.getElementById('branchSel');
+    const btnGo      = document.getElementById('btnGo');
+    const nearBtn    = document.getElementById('btnNear');
+    const nearWrap   = document.getElementById('nearResults');
+
+    async function loadCities(countryId){
+      citySel.innerHTML   = '<option value="">اختر</option>';
+      branchSel.innerHTML = '<option value="">اختر المدينة أولًا</option>';
+      branchSel.disabled  = true;
+
+      if(!countryId){ citySel.disabled = true; return; }
+      const r  = await fetch(`/join/cities?countryId=${countryId}`);
+      const js = await r.json();
+      citySel.innerHTML = '<option value="">اختر</option>' + js.map(x => `<option value="${x.id}">${x.name}</option>`).join('');
+      citySel.disabled = false;
+    }
+
+    async function loadBranches(cityId){
+      branchSel.innerHTML = '<option value="">اختر</option>';
+      if(!cityId){ branchSel.disabled = true; return; }
+      const r  = await fetch(`/join/branches?cityId=${cityId}`);
+      const js = await r.json();
+      branchSel.innerHTML = '<option value="">اختر</option>' + js.map(x => `<option value="${x.id}">${x.name}</option>`).join('');
+      branchSel.disabled = false;
+    }
+
+    countrySel?.addEventListener('change', ()=> loadCities(countrySel.value));
+    citySel   ?.addEventListener('change', ()=> loadBranches(citySel.value));
+    branchSel ?.addEventListener('change', ()=>{
+      const c = countrySel.value, city = citySel.value, br = branchSel.value;
+      if (c && city && br){
+        btnGo.classList.remove('disabled');
+        btnGo.href = `/join/step1?countryId=${c}&cityId=${city}&branchId=${br}`;
+      } else {
+        btnGo.classList.add('disabled');
+        btnGo.href = '#';
+      }
+    });
+
+    // الأقرب تلقائيًا
+    nearBtn?.addEventListener('click', ()=>{
+      if(!navigator.geolocation){
+        alert('المتصفح لا يدعم تحديد الموقع.');
+        return;
+      }
+      navigator.geolocation.getCurrentPosition(async (pos)=>{
+        const { latitude, longitude } = pos.coords;
+        const r  = await fetch(`/join/nearest?lat=${latitude}&lng=${longitude}&take=6`);
+        const js = await r.json(); // [{branchId, branchName, cityName, distanceKm}]
+        if(!js || js.length === 0){
+          nearWrap.classList.add('d-none');
+          nearWrap.innerHTML = '';
+          return;
+        }
+        nearWrap.classList.remove('d-none');
+        nearWrap.innerHTML = js.map(x => `
+          <div class="col-md-4" data-aos="fade-up">
+            <div class="card shadow-sm h-100 rounded-4 near-card card-hover">
+              <div class="card-body d-flex flex-column">
+                <div class="fw-bold mb-1">${x.branchName}</div>
+                <div class="text-muted small mb-3">${x.cityName} — <span class="km">${Number(x.distanceKm).toFixed(1)}</span> كم</div>
+                <a class="btn btn-gradient mt-auto" href="/join/step1?branchId=${x.branchId}">اشترك في هذا الفرع</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+        if (window.AOS) AOS.refresh();
+      }, (err)=> alert('تعذّر تحديد الموقع.'));
+    });
+
+    // ========== Upcoming Sessions ==========
+    async function loadSessions(){
+      try{
+        const r = await fetch('/api/sessions/upcoming?take=8');
+        const js = await r.json();
+        const wrap = document.getElementById('sessionsWrap');
+        if(!js || js.length === 0){
+          wrap.innerHTML = '<div class="col-12 text-muted">لا توجد جلسات حاليًا.</div>';
+          return;
+        }
+        wrap.innerHTML = js.map(s => `
+          <div class="col-md-3" data-aos="fade-up">
+            <div class="card shadow-sm h-100 rounded-4 card-hover session-card">
+              <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between mb-1">
+                  <div class="fw-bold">${s.title}</div>
+                  <span class="badge"> ${s.duration} دقيقة </span>
+                </div>
+                <div class="text-muted small mb-2">${s.city} — ${s.branch}</div>
+                <div class="mb-2"><i class="bi bi-clock ms-1"></i><span class="text-muted">الوقت:</span> ${s.startLocal}</div>
+                <a class="btn btn-outline-danger w-100 mt-2" href="/account/login">احجز مكانك</a>
+              </div>
+            </div>
+          </div>
+        `).join('');
+        if (window.AOS) AOS.refresh();
+      }catch{
+        document.getElementById('sessionsWrap').innerHTML = '<div class="col-12 text-muted">تعذّر تحميل الجلسات.</div>';
+      }
+    }
+    loadSessions();
+  </script>
+}

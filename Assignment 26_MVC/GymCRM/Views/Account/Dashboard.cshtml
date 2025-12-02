@@ -1,0 +1,208 @@
+﻿@model GymCRM.ViewModels.UserDashboardViewModel
+@{
+    ViewData["Title"] = "لوحة العميل";
+    string fmt(DateTime? d) => d.HasValue ? d.Value.ToString("yyyy/MM/dd") : "-";
+}
+
+<div class="row g-3">
+  <div class="col-12 d-flex align-items-center justify-content-between" data-aos="fade-down">
+    <h3 class="mb-0">مرحبًا، @Model.FullName</h3>
+  </div>
+
+  @if (Model.JustPaid)
+  {
+    <div class="col-12" data-aos="fade-up">
+      <div class="alert alert-success">
+        تم الدفع بنجاح. مرجع العملية: <b dir="ltr">@Model.PaymentRef</b>
+      </div>
+    </div>
+  }
+
+  <!-- بيانات العميل -->
+  <div class="col-md-6" data-aos="zoom-in" data-aos-delay="50">
+    <div class="card shadow-sm border-0 h-100">
+      <div class="card-body">
+        <h5 class="mb-3"><i class="bi bi-person-badge me-1"></i> بيانات التواصل</h5>
+        <div class="d-flex justify-content-between"><span>البريد:</span><b dir="ltr">@Model.Email</b></div>
+        <div class="d-flex justify-content-between"><span>الجوال:</span><b dir="ltr">@Model.Phone</b></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- الاشتراك الحالي -->
+  <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+    <div class="card shadow-sm border-0 h-100">
+      <div class="card-body">
+        <h5 class="mb-3"><i class="bi bi-card-checklist me-1"></i> الاشتراك الحالي</h5>
+        @if (Model.SubscriptionId.HasValue)
+        {
+          <div class="d-flex justify-content-between"><span>رقم الاشتراك:</span><b>@Model.SubscriptionId</b></div>
+          <div class="d-flex justify-content-between">
+            <span>الحالة:</span>
+            <b class="@(Model.Status == "Paid" ? "text-success" : "text-warning")">@Model.Status</b>
+          </div>
+          <div class="d-flex justify-content-between"><span>الخطة:</span><b>@Model.PlanTitle</b></div>
+          <div class="d-flex justify-content-between"><span>الفرع:</span><b>@Model.BranchName</b></div>
+          <div class="d-flex justify-content_between"><span>المدينة:</span><b>@Model.CityName</b></div>
+          <div class="d-flex justify-content-between"><span>تاريخ البداية:</span><b>@fmt(Model.StartDate)</b></div>
+          <div class="d-flex justify-content-between"><span>تاريخ الانتهاء:</span><b>@fmt(Model.EndDate)</b></div>
+          <div class="d-flex justify-content-between"><span>المتبقي:</span><b>@(Model.DaysRemaining.HasValue ? $"{Model.DaysRemaining} يوم" : "-")</b></div>
+          @if (!string.IsNullOrWhiteSpace(Model.AppliedCoupon))
+          {
+            <div class="d-flex justify-content-between"><span>الكوبون:</span><b>@Model.AppliedCoupon</b></div>
+          }
+          <hr />
+          <div class="d-flex justify-content-between"><span>الصافي:</span><b>@Model.Subtotal ر.س</b></div>
+          <div class="d-flex justify-content-between"><span>الضريبة:</span><b>@Model.Vat ر.س</b></div>
+          <div class="d-flex justify-content-between"><span>الإجمالي:</span><b>@Model.Total ر.س</b></div>
+          <div class="d-flex justify-content-between"><span>مرجع الدفع:</span><b dir="ltr">@Model.PaymentRef</b></div>
+        }
+        else
+        {
+          <div class="text-muted">لا توجد اشتراكات بعد.</div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- إجراءات -->
+  <div class="col-12" data-aos="fade-up" data-aos-delay="150">
+    <div class="card shadow-sm border-0">
+      <div class="card-body">
+        <h5 class="mb-3"><i class="bi bi-gear me-1"></i> إجراءات</h5>
+        <div class="d-flex gap-2">
+          @if (Model.CanStartNew)
+          {
+            <a class="btn btn-outline-primary" href="/join/step1"><i class="bi bi-plus-circle me-1"></i> بدء اشتراك جديد</a>
+          }
+          else
+          {
+            <span class="text-muted">سيظهر زر “بدء اشتراك جديد” تلقائيًا قبل انتهاء اشتراكك بـ 5 أيام.</span>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- جدول الجلسات -->
+  @if (Model.Bookings?.Any() == true)
+  {
+    <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+      <div class="card shadow-sm border-0 mt-1">
+        <div class="card-body">
+          <h5 class="mb-3"><i class="bi bi-calendar-check me-1"></i> جلساتي</h5>
+
+          @if (TempData["Ok"] is string okMsg)
+          {
+            <div class="alert alert-success">@okMsg</div>
+          }
+          @if (TempData["Err"] is string errMsg)
+          {
+            <div class="alert alert-danger">@errMsg</div>
+          }
+
+          <div class="table-responsive">
+            <table class="table table-hover align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th>الجلسة</th>
+                  <th>الفرع</th>
+                  <th>التاريخ</th>
+                  <th>المدة</th>
+                  <th>الحالة</th>
+                  <th>إجراء</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach (var b in Model.Bookings)
+                {
+                  <tr>
+                    <td>@b.SessionTitle</td>
+                    <td>@b.BranchName</td>
+                    <td><span class="badge bg-secondary-subtle text-dark border">@b.StartAtLocal:yyyy/MM/dd HH:mm</span></td>
+                    <td>@b.DurationMin دقيقة</td>
+                    <td>
+                      @switch (b.Status)
+                      {
+                        case GymCRM.Model.BookingStatus.Booked:
+                          @:<span class="badge bg-primary">محجوز</span>
+                          break;
+                        case GymCRM.Model.BookingStatus.CancelRequested:
+                          @:<span class="badge bg-warning text-dark">طلب إلغاء</span>
+                          break;
+                        case GymCRM.Model.BookingStatus.CancelApproved:
+                          @:<span class="badge bg-success">تم الإلغاء</span>
+                          break;
+                        case GymCRM.Model.BookingStatus.CancelRejected:
+                          @:<span class="badge bg-danger">رُفض الإلغاء</span>
+                          break;
+                      }
+                    </td>
+                    <td>
+                      @if (b.Attended == true)
+                      {
+                        <span class="badge bg-success">تم الحضور</span>
+                      }
+                      else
+                      {
+                        if (b.CanCheckIn)
+                        {
+                          <form asp-action="CheckIn" asp-controller="Account" asp-route-id="@b.BookingId" method="post" class="d-inline js-once">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-sm btn-success">
+                              <i class="bi bi-check2-circle me-1"></i> تأكيد الحضور
+                            </button>
+                          </form>
+                        }
+
+                        if (b.CanCancel)
+                        {
+                          <form asp-action="CancelRequest" asp-controller="Account" asp-route-id="@b.BookingId" method="post" class="d-inline ms-1 js-once" onsubmit="return confirm('تأكيد طلب إلغاء هذه الجلسة؟');">
+                            @Html.AntiForgeryToken()
+                            <button type="submit" class="btn btn-sm btn-outline-danger">
+                              <i class="bi bi-x-octagon me-1"></i> طلب إلغاء
+                            </button>
+                          </form>
+                        }
+
+                        if (!b.CanCheckIn && !b.CanCancel)
+                        {
+                          <span class="text-muted">—</span>
+                        }
+                      }
+                    </td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+
+          <div class="small text-muted mt-2">
+            <i class="bi bi-info-circle"></i>
+            تأكيد الحضور متاح من 30 دقيقة قبل بداية الجلسة وحتى نهايتها. الإلغاء مسموح قبل 4 ساعات من البداية.
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+  else
+  {
+    <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+      <div class="alert alert-info mt-3">لا توجد جلسات مسجّلة بعد.</div>
+    </div>
+  }
+</div>
+
+@section Scripts{
+<script>
+  document.querySelectorAll('form.js-once').forEach(f=>{
+    f.addEventListener('submit', function(){
+      const btn = f.querySelector('button[type="submit"]');
+      if (btn){
+        btn.disabled = true;
+        btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status"></span> جاري التنفيذ...';
+      }
+    });
+  });
+</script>
+}

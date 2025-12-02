@@ -1,0 +1,146 @@
+﻿@model Step3ReviewViewModel
+@{
+    await Html.RenderPartialAsync("_Progress", 3);
+    ViewData["Title"] = "مراجعة الاشتراك";
+
+    string GenderLabel()
+    {
+        if (Model?.Step1?.Gender is null) return "-";
+        return Model.Step1.Gender == GymCRM.Model.Gender.Female ? "أنثى" : "ذكر";
+    }
+    bool HasCoupon = !string.IsNullOrWhiteSpace(Model?.Step1?.CouponCode);
+}
+
+<style>
+  .card-shell{ border-radius:1rem; overflow:hidden; }
+  .card-hero{
+    background: linear-gradient(135deg,#dc3545,#ff6b6b);
+    color:#fff; padding:1.25rem 1.25rem .75rem; border-radius:1rem 1rem 0 0;
+  }
+  .subtitle{ opacity:.9 }
+
+  .list-group-item{
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .badge-soft{
+    background: rgba(220,53,69,.1); color:#dc3545; border:1px solid rgba(220,53,69,.2);
+  }
+
+  .invoice{
+    border:1px dashed rgba(0,0,0,.1); border-radius:.75rem; background:#fff;
+  }
+  .invoice .row > div{ padding:.35rem 0; }
+  .total-line{ border-top:1px dashed rgba(0,0,0,.15); padding-top:.5rem; }
+
+  .btn-gradient{
+    background: linear-gradient(90deg,#dc3545,#ff6b6b); border:none; color:#fff !important;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-gradient:hover{ transform: translateY(-1px); box-shadow:0 .5rem 1rem rgba(220,53,69,.25);}
+</style>
+
+<div class="card shadow-sm card-shell" data-aos="fade-up" data-aos-duration="600">
+  <div class="card-hero">
+    <div class="h5 fw-bold mb-1">مراجعة الاشتراك</div>
+    <div class="subtitle">راجع اختياراتك وتأكد قبل الدفع</div>
+  </div>
+
+  <div class="card-body">
+    <div class="row g-4">
+      <!-- المراجعة العامة -->
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="50">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+          <div class="fw-bold">الاختيارات</div>
+          <div class="d-flex gap-2">
+            <a class="btn btn-outline-secondary btn-sm" href="/join/step1"><i class="bi bi-sliders"></i> تعديل التفضيلات</a>
+            <a class="btn btn-outline-secondary btn-sm" href="/join/step2"><i class="bi bi-person"></i> تعديل البيانات</a>
+          </div>
+        </div>
+
+        <ul class="list-group mb-3 shadow-sm rounded-3">
+          <li class="list-group-item"><span>النوع</span><b>@GenderLabel()</b></li>
+          <li class="list-group-item"><span>المدينة</span><b>@Model.CityName</b></li>
+          <li class="list-group-item"><span>الفرع</span><b>@Model.BranchName</b></li>
+          <li class="list-group-item"><span>الخطة</span><b>@Model.PlanTitle</b></li>
+          <li class="list-group-item">
+            <span>كود الخصم</span>
+            <b class="@(HasCoupon ? "badge badge-soft rounded-2 px-2 py-1" : "")" dir="ltr">
+              @(HasCoupon ? Model.Step1.CouponCode : "-")
+            </b>
+          </li>
+        </ul>
+
+        <!-- الفاتورة / الملخص المالي -->
+        <div class="invoice p-3 shadow-sm">
+          <div class="row small">
+            <div class="col-6 text-muted">الصافي</div>
+            <div class="col-6 text-end"><b dir="ltr">@Model.Subtotal.ToString("0.##")</b> ر.س</div>
+
+            <div class="col-6 text-muted">الضريبة</div>
+            <div class="col-6 text-end"><b dir="ltr">@Model.Vat.ToString("0.##")</b> ر.س</div>
+
+            <div class="col-12 total-line"></div>
+
+            <div class="col-6 fw-bold">الإجمالي</div>
+            <div class="col-6 text-end fw-bold"><span class="fs-5" dir="ltr">@Model.Total.ToString("0.##")</span> ر.س</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- بيانات العميل -->
+      <div class="col-lg-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="border rounded-3 p-3 bg-light shadow-sm h-100">
+          <div class="d-flex align-items-center justify-content-between mb-2">
+            <h6 class="mb-0 fw-bold">بيانات العميل</h6>
+            <span class="badge bg-white text-muted border">خاص</span>
+          </div>
+
+          <div class="d-flex justify-content-between py-1"><span>الاسم:</span><b>@Model.Step2.FullName</b></div>
+          <div class="d-flex justify-content-between py-1"><span>الهوية:</span><b dir="ltr">@Model.Step2.NationalId</b></div>
+          <div class="d-flex justify-content-between py-1"><span>الجوال:</span><b dir="ltr">@Model.Step2.Phone</b></div>
+          <div class="d-flex justify-content-between py-1"><span>الإيميل:</span><b dir="ltr">@Model.Step2.Email</b></div>
+
+          <hr class="my-3" />
+          <div class="small text-muted">
+            بالتأكيدك، سننشئ الحساب وننقلك لخطوة الدفع بأمان. يمكنك تعديل بياناتك لاحقًا من لوحة العميل.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- أزرار الحركة -->
+    <div class="d-flex gap-2 mt-4" data-aos="fade-up" data-aos-delay="150">
+      <a class="btn btn-outline-secondary" href="/join/step1"><i class="bi bi-arrow-right-circle"></i> تعديل التفضيلات</a>
+      <a class="btn btn-outline-secondary" href="/join/step2"><i class="bi bi-pencil-square"></i> تعديل البيانات</a>
+
+      <form asp-action="Confirm" method="post" class="ms-auto" id="confirmForm">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-gradient" id="confirmBtn">
+          <span class="spinner-border spinner-border-sm me-1 d-none" id="confirmSpin"></span>
+          تأكيد والانتقال للدفع
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+  <!-- AOS (لو مش مُفعّل عالميًا) -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    if (window.AOS) AOS.init({ duration: 600, once: true });
+
+    // زر التأكيد: تعطيل + سبينر
+    (function () {
+      const form = document.getElementById('confirmForm');
+      const btn  = document.getElementById('confirmBtn');
+      const spin = document.getElementById('confirmSpin');
+
+      form?.addEventListener('submit', function () {
+        btn.disabled = true;
+        spin.classList.remove('d-none');
+        btn.classList.add('opacity-75');
+      });
+    })();
+  </script>
+}

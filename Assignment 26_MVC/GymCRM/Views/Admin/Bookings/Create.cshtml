@@ -1,0 +1,112 @@
+﻿@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "إنشاء حجز لعميل";
+    var sessionOptions = ViewBag.SessionsOptions as List<SelectListItem> ?? new List<SelectListItem>();
+    var sessionBranch  = ViewBag.SessionBranchMap as Dictionary<string, int> ?? new Dictionary<string, int>();
+}
+
+<h3 class="mb-3">إنشاء حجز</h3>
+
+@if (!sessionOptions.Any())
+{
+    <div class="alert alert-warning">
+        لا توجد جلسات مستقبلية متاحة حالياً.
+        <a class="alert-link" href="/admin/sessions/create">أنشئ جلسة جديدة</a>
+        ثم عُد لهذه الصفحة.
+    </div>
+}
+
+<div class="card shadow-sm border-0" data-aos="fade-up" data-aos-duration="600">
+  <div class="card-body p-4">
+    <!-- ملاحظة مهمة: لو الـ POST action اسمُه CreatePost (زي ما عندك)، خليه asp-action="CreatePost" -->
+    <form asp-area="" asp-controller="AdminBookings" asp-action="CreatePost" method="post" class="row g-3" id="createBookingForm">
+      @Html.AntiForgeryToken()
+
+      <div class="col-md-6">
+        <label class="form-label">الجلسة</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-calendar-event"></i></span>
+          <select id="sessionSel" name="scheduledSessionId" class="form-select" required>
+            <option value="">اختر جلسة</option>
+            @foreach (var opt in sessionOptions)
+            {
+                var bid = sessionBranch.TryGetValue(opt.Value, out var b) ? b : 0;
+                <option value="@opt.Value" data-branch="@bid">@opt.Text</option>
+            }
+          </select>
+        </div>
+        <div class="form-text text-muted">يظهر التاريخ/الوقت مع اسم الفرع.</div>
+        <div class="invalid-feedback">من فضلك اختر جلسة.</div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">العميل</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-person-badge"></i></span>
+          <select id="customerSel" name="customerId" class="form-select" disabled required>
+            <option value="">اختر العميل</option>
+          </select>
+        </div>
+        <div class="form-text text-muted">يتم تحميل العملاء أصحاب الاشتراك الساري في نفس الفرع.</div>
+        <div class="invalid-feedback">من فضلك اختر عميل.</div>
+      </div>
+
+      <div class="col-12 d-flex gap-2">
+        <a class="btn btn-outline-secondary" href="/admin/dashboard">
+          <i class="bi bi-arrow-right-circle"></i> رجوع
+        </a>
+        <button type="submit" class="btn btn-primary" id="saveBtn">
+          <i class="bi bi-check2-circle me-1"></i> حفظ الحجز
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+@section Scripts {
+<script>
+  // عناصر
+  const form        = document.getElementById('createBookingForm');
+  const saveBtn     = document.getElementById('saveBtn');
+  const sessionSel  = document.getElementById('sessionSel');
+  const customerSel = document.getElementById('customerSel');
+
+  // تحميل العملاء حسب الفرع المختار من الجلسة
+  async function loadCustomersByBranch(branchId){
+    customerSel.innerHTML = '<option value="">اختر العميل</option>';
+    customerSel.disabled  = true;
+
+    if(!branchId || branchId === '0') return;
+
+    try {
+      const r  = await fetch(`/admin/bookings/customers?branchId=${encodeURIComponent(branchId)}`);
+      if(!r.ok) throw new Error('HTTP ' + r.status);
+      const js = await r.json(); // [{id,name}]
+      customerSel.innerHTML += js.map(x => `<option value="${x.id}">${x.name}</option>`).join('');
+      customerSel.disabled = js.length === 0;
+    } catch (e) {
+      console.error(e);
+      customerSel.innerHTML = '<option value="">تعذر تحميل العملاء</option>';
+      customerSel.disabled = true;
+    }
+  }
+
+  sessionSel.addEventListener('change', () => {
+    const opt = sessionSel.selectedOptions[0];
+    const branchId = opt ? opt.getAttribute('data-branch') : null;
+    loadCustomersByBranch(branchId);
+  });
+
+  // منع النقر المزدوج + Bootstrap validation
+  form?.addEventListener('submit', function (e) {
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      e.stopPropagation();
+      form.classList.add('was-validated');
+      return;
+    }
+    saveBtn.disabled = true;
+    saveBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> جاري الحفظ...';
+  }, false);
+</script>
+}
