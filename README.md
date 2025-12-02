@@ -1,4 +1,4 @@
-# C# Assignments Repository (C43-G03)
+# C# Assignments Repository (C44-G03)
 
 ![C#](https://img.shields.io/badge/C%23-.NET-512BD4?logo=dotnet&logoColor=white)
 ![Status](https://img.shields.io/badge/Assignments-In%20Progress-yellow)
