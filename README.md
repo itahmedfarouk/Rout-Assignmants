@@ -97,7 +97,7 @@ dotnet run
 ## 👥 Contributors
 
 * **Ahmed Farouk** — Repo Owner
-* **Group C43-G03**
+* **Group C44-G03**
 
 > Want to contribute or improve solutions? Feel free to create a PR.
 
