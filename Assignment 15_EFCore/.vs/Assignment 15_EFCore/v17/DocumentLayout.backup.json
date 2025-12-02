@@ -1,0 +1,294 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Data\\Migrations\\20250909113750_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assignment01-Ef-Core\\Data\\Migrations\\20250909113750_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\configurations\\courseinstconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\configurations\\courseinstconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\configurations\\studcourseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\configurations\\studcourseconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\configurations\\instructorconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\configurations\\instructorconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\assignment01-ef-core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\assignment01-ef-core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\models\\course_inst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\models\\course_inst.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\models\\stud_course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\models\\stud_course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\models\\instructor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\models\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\models\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\models\\topic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|e:\\route (fullstack .net)\\c#\\c# tasks\\assignment-ef-core01\\assignment01-ef-core\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7093F2A6-63C7-4A2E-86BC-495E9441E23A}|Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj|solutionrelative:assignment01-ef-core\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250909113750_InitialCreate.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Data\\Migrations\\20250909113750_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Data\\Migrations\\20250909113750_InitialCreate.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Data\\Migrations\\20250909113750_InitialCreate.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Data\\Migrations\\20250909113750_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T11:37:50.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CourseInstConfig.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Configurations\\CourseInstConfig.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Configurations\\CourseInstConfig.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Configurations\\CourseInstConfig.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Configurations\\CourseInstConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T11:34:05.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudCourseConfig.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Configurations\\StudCourseConfig.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Configurations\\StudCourseConfig.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Configurations\\StudCourseConfig.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Configurations\\StudCourseConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T11:33:12.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "InstructorConfig.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Configurations\\InstructorConfig.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Configurations\\InstructorConfig.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Configurations\\InstructorConfig.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Configurations\\InstructorConfig.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwB8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T11:32:46.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Assignment01-Ef-Core",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Assignment01-Ef-Core.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-09T11:32:21.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Course_Inst.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Course_Inst.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Models\\Course_Inst.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Course_Inst.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Models\\Course_Inst.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T11:31:55.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Stud_Course.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Stud_Course.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Models\\Stud_Course.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Stud_Course.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Models\\Stud_Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T11:31:42.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Topic.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Topic.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Models\\Topic.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Topic.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Models\\Topic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T11:30:36.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Data\\AppDbContext.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA2wCAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T09:36:15.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Department.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Department.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Models\\Department.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Department.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Models\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T09:35:53.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Instructor.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Instructor.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Models\\Instructor.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Instructor.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Models\\Instructor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T09:35:39.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Course.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Course.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Models\\Course.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Course.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Models\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T09:35:17.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Student.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Models\\Student.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Models\\Student.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T09:34:59.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Program.cs",
+              "RelativeDocumentMoniker": "Assignment01-Ef-Core\\Program.cs",
+              "ToolTip": "E:\\Route (FullStack .Net)\\C#\\C# Tasks\\Assignment-Ef-Core01\\Assignment01-Ef-Core\\Program.cs",
+              "RelativeToolTip": "Assignment01-Ef-Core\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T09:34:01.277Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
